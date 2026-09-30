@@ -1,0 +1,10 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lycee-classic-apache",
+      "port": 80,
+      "url": "http://localhost"
+    }
+  ]
+}

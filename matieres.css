@@ -1,0 +1,131 @@
+/* =========================================================
+   SCOLARIS — Module Matières
+   Complément de tableau-de-bord.css et eleves.css
+   ========================================================= */
+
+.fin-centre{ text-align: center; }
+
+/* ---------- Code matière ---------- */
+.code-matiere{
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--champ);
+  color: var(--texte-doux);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+
+/* ---------- Avatar coloré par catégorie ---------- */
+.avatar-matiere{
+  color: var(--blanc);
+  font-weight: 800;
+}
+.avatar-matiere.bleue{ background: var(--royal); }
+.avatar-matiere.ambre{ background: linear-gradient(180deg, var(--ambre-clair) 0%, var(--ambre) 100%); color: var(--nuit-fonce); }
+.avatar-matiere.verte{ background: var(--vert); }
+
+.portrait.avatar-matiere{
+  width: 78px; height: 78px; flex: 0 0 78px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 28px;
+  box-shadow: 0 8px 22px -10px rgba(0,0,0,.7);
+}
+
+/* ---------- Puce de catégorie ---------- */
+.puce-categorie{
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 11px;
+  border-radius: 99px;
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.puce-categorie.bleue{ background: var(--royal-pale); color: var(--nuit); }
+.puce-categorie.ambre{ background: var(--ocre-pale); color: var(--ocre); }
+.puce-categorie.verte{ background: var(--vert-pale); color: var(--vert); }
+
+/* ---------- Bouton destructif ---------- */
+.btn.danger{
+  border-color: var(--rouge-pale);
+  color: var(--rouge);
+}
+.btn.danger:hover{ background: var(--rouge-pale); border-color: var(--rouge); }
+
+/* ---------- Note d'information (fenêtre de création) ---------- */
+.note{
+  margin-bottom: 16px;
+  padding: 12px 15px;
+  border-left: 3px solid var(--ambre);
+  border-radius: 0 8px 8px 0;
+  background: #FEF8EE;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6B5B3E;
+}
+
+/* ---------- Classes concernées (fenêtre de création) ---------- */
+.bloc-classes{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--bordure);
+}
+.bloc-classes > label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--texte-doux);
+}
+.bloc-classes .aide{ display: block; margin-bottom: 4px; font-size: 12px; color: var(--texte-doux); }
+
+.cases-classes{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 12px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 8px;
+  background: #FAFBFE;
+}
+.cases-classes .groupe-niveau{
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--texte-doux);
+}
+.cases-classes .groupe-niveau:first-child{ margin-top: 0; }
+
+.case-classe{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 7px;
+  background: var(--blanc);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+}
+.case-classe:has(input:checked){
+  border-color: var(--nuit);
+  background: var(--royal-pale);
+  font-weight: 600;
+}
+.case-classe input{ accent-color: var(--nuit); width: 15px; height: 15px; flex: 0 0 auto; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px){
+  .filtres-hauts{ flex-direction: column; }
+  .filtres-hauts input, .filtres-hauts select{ width: 100%; }
+  .table-defile table{ min-width: 680px; }
+}

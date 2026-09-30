@@ -1,0 +1,163 @@
+/* =========================================================
+   SCOLARIS — Module Bulletins
+   Complément de tableau-de-bord.css / eleves.css / Notes.css
+   ========================================================= */
+
+/* ---------- En-tête ministériel bilingue (République / crest / Republic) ---------- */
+.bulletin-officiel{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1.5px solid var(--bordure);
+  text-align: center;
+}
+.bulletin-officiel-colonne{ flex: 1; font-size: 11.5px; line-height: 1.55; color: var(--nuit); }
+.bulletin-officiel-colonne p{ margin: 0; }
+.bulletin-officiel-colonne p:first-child{ font-weight: 700; text-transform: uppercase; font-size: 12px; }
+.bulletin-officiel-devise{ font-style: italic; font-size: 11px; color: var(--texte-doux); }
+.bulletin-officiel-logo{ flex: 0 0 auto; padding-top: 2px; }
+.bulletin-officiel-logo img{
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--blanc);
+  border: 1.5px solid var(--bordure);
+}
+
+/* ---------- Nom de l'établissement ---------- */
+.bulletin-letterhead{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.bulletin-letterhead img{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--blanc);
+  border: 1.5px solid var(--bordure);
+}
+.bulletin-letterhead div{ text-align: left; }
+.bulletin-letterhead b{ display: block; font-size: 15px; color: var(--nuit); }
+.bulletin-letterhead span{ font-size: 12px; color: var(--texte-doux); }
+
+/* ---------- Titre du document + numéro d'immatriculation ---------- */
+.bulletin-titre-doc{
+  text-align: center;
+  margin-bottom: 16px;
+}
+.bulletin-titre-doc h2{ margin: 0 0 4px; font-size: 15.5px; letter-spacing: .02em; color: var(--nuit); }
+.bulletin-titre-doc span{ font-size: 11px; color: var(--texte-doux); }
+.bulletin-titre-doc b{ color: var(--nuit); font-family: 'Courier New', monospace; letter-spacing: .03em; }
+
+.bulletin-entete{ margin-bottom: 20px; }
+.bulletin-entete .fiche-identite p{ margin-top: 6px; }
+
+.carte-groupe{ margin-bottom: 18px; }
+.carte-groupe .carte-entete h3{ text-transform: uppercase; letter-spacing: .03em; font-size: 13px; }
+
+.ligne-moyenne-groupe td{
+  background: var(--royal-pale);
+  font-weight: 700;
+  color: var(--nuit);
+  border-top: 1.5px solid var(--bordure);
+}
+.ligne-moyenne-groupe td:first-child{ text-align: left; }
+.ligne-moyenne-groupe td:last-child{ text-align: center; }
+
+.carte-synthese{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 22px 24px;
+  margin-top: 8px;
+  align-items: center;
+}
+.synthese-item{ display: flex; flex-direction: column; gap: 4px; min-width: 160px; }
+.synthese-item .etiquette{ font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--texte-doux); }
+.synthese-item .valeur{ font-size: 24px; font-weight: 800; color: var(--nuit); }
+
+/* ---------- Signatures (parent, direction) ---------- */
+.bulletin-signatures{
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-top: 28px;
+  padding-top: 8px;
+}
+.signature-bloc{
+  flex: 1;
+  max-width: 260px;
+  text-align: center;
+}
+.signature-ligne{
+  display: block;
+  height: 56px;
+  border-bottom: 1px solid var(--texte-doux);
+}
+.signature-bloc b{
+  display: block;
+  margin-top: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--texte-doux);
+}
+
+@media print{
+  .filtres-hauts, .entete{ display: none !important; }
+  .carte-groupe, .carte-synthese{ page-break-inside: avoid; box-shadow: none; }
+
+  @page{ margin: 10mm; }
+
+  /* Mise en page calibrée pour occuper toute la page A4 sur une seule page
+     (ni débordement sur une 2ᵉ page, ni grand vide en bas) : l'interligne
+     par défaut du site (1.5, hérité de body) est repris à une valeur plus
+     lisible qu'en mode resserré, et chaque bloc est agrandi en conséquence. */
+  #zoneBulletin, #zoneBulletin *{ line-height: 1.14 !important; }
+
+  .bulletin-officiel{ padding-bottom: 3px; margin-bottom: 3px; }
+  .bulletin-officiel-colonne{ font-size: 7.5px; line-height: 1.08 !important; }
+  .bulletin-officiel-colonne p:first-child{ font-size: 8px; }
+  .bulletin-officiel-devise{ font-size: 7px; }
+  .bulletin-officiel-logo img{ width: 28px; height: 28px; }
+
+  .bulletin-letterhead{ margin-bottom: 3px; }
+  .bulletin-letterhead b{ font-size: 12px; }
+  .bulletin-letterhead span{ font-size: 9px; }
+
+  .bulletin-titre-doc{ margin-bottom: 5px; }
+  .bulletin-titre-doc h2{ font-size: 11px; margin-bottom: 1px; }
+  .bulletin-titre-doc span{ font-size: 8px; }
+
+  .fiche-tete{ padding: 6px 16px; margin-bottom: 4px; }
+  .portrait{ width: 36px; height: 36px; flex: 0 0 36px; font-size: 14px; }
+  .fiche-identite h1{ font-size: 15px; }
+  .fiche-identite p{ margin-top: 2px; font-size: 10.5px; }
+
+  .carte-groupe{ margin-bottom: 5px; }
+  .carte-groupe .carte-entete{ padding: 3px 12px; }
+  .carte-groupe .carte-entete h3{ font-size: 10px; }
+  .tableau th{ padding: 2px 8px; font-size: 8.5px; }
+  .tableau td{ padding: 2px 8px; font-size: 10.5px; }
+
+  .carte-synthese{ padding: 8px 18px; gap: 16px; margin-top: 5px; }
+  .synthese-item{ min-width: 120px; gap: 2px; }
+  .synthese-item .etiquette{ font-size: 9.5px; }
+  .synthese-item .valeur{ font-size: 16px; }
+
+  .bulletin-signatures{ margin-top: 10px; gap: 32px; padding-top: 0; }
+  .signature-ligne{ height: 26px; }
+  .signature-bloc b{ margin-top: 3px; font-size: 10px; }
+}
+
+@media (max-width: 900px){
+  .carte-synthese{ flex-direction: column; align-items: flex-start; gap: 14px; }
+}

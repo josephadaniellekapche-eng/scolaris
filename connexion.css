@@ -1,0 +1,415 @@
+/* =========================================================
+   SCOLARIS — Page de connexion
+   Feuille de style principale
+   ========================================================= */
+
+/* ---------- 1. Variables ---------- */
+:root{
+  /* Marque */
+  --nuit:        #1E2B7E;   /* bleu principal */
+  --nuit-clair:  #2A3A9E;   /* dégradé et survol */
+  --nuit-fonce:  #16205F;   /* bas du dégradé */
+  --royal:       #4A63EB;   /* accent */
+
+  /* Neutres */
+  --fond:        #F7F8FC;   /* fond du panneau droit */
+  --blanc:       #FFFFFF;
+  --champ:       #EDF0F6;   /* fond des champs */
+  --bordure:     #E2E6EF;
+  --texte:       #1F2937;
+  --texte-doux:  #6B7280;
+  --lien:        #1069A8;
+
+  /* Signaux */
+  --erreur:      #C0392B;
+  --succes:      #2C7A5B;
+
+  /* Divers */
+  --rayon:       12px;
+  --transition:  .18s ease;
+}
+
+/* ---------- 2. Base ---------- */
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body{ height: 100%; }
+
+body{
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--texte);
+  background: var(--fond);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input{ font-family: inherit; font-size: inherit; color: inherit; }
+button{ cursor: pointer; border: none; background: none; }
+
+:focus-visible{
+  outline: 2px solid var(--royal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Grille principale : deux colonnes plein écran */
+.page{
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: 100vh;
+}
+
+/* =========================================================
+   3. PANNEAU GAUCHE — Marque
+   ========================================================= */
+.marque{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  text-align: center;
+  background: linear-gradient(150deg, var(--nuit-clair) 0%, var(--nuit) 45%, var(--nuit-fonce) 100%);
+}
+
+/* Trame quadrillée discrète en arrière-plan */
+.marque::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(to bottom, transparent 0 47px, rgba(255,255,255,.05) 47px 48px),
+    repeating-linear-gradient(to right,  transparent 0 47px, rgba(255,255,255,.05) 47px 48px);
+}
+
+.marque-contenu{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Cadre blanc du logo */
+.logo-cadre{
+  width: 128px;
+  height: 128px;
+  background: var(--blanc);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  box-shadow: 0 12px 30px -12px rgba(0,0,0,.45);
+}
+.logo-cadre img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.nom{
+  margin-top: 26px;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--blanc);
+}
+
+.sous-titre{
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255,255,255,.82);
+}
+
+/* Emplacement libre (illustration, photo, devise…) */
+.illustration{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 34px 0;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--rayon);
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.03);
+}
+.devise{
+  font-size: 13px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+}
+
+.slogan{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--blanc);
+  max-width: 20ch;
+}
+
+/* =========================================================
+   4. PANNEAU DROIT — Formulaire
+   ========================================================= */
+.acces{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+  background: var(--fond);
+}
+
+/* Quadrillage estompé sur les bords */
+.acces::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(to bottom, transparent 0 63px, rgba(30,43,126,.05) 63px 64px),
+    repeating-linear-gradient(to right,  transparent 0 63px, rgba(30,43,126,.05) 63px 64px);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 45%, #000 15%, transparent 75%);
+          mask-image: radial-gradient(ellipse at 50% 45%, #000 15%, transparent 75%);
+}
+
+.carte{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 416px;
+  background: var(--blanc);
+  border-radius: 16px;
+  padding: 40px 36px 32px;
+  box-shadow: 0 1px 2px rgba(30,43,126,.05),
+              0 24px 48px -24px rgba(30,43,126,.28);
+}
+
+.titre{
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--nuit);
+}
+
+.intro{
+  margin-top: 6px;
+  margin-bottom: 28px;
+  font-size: 14.5px;
+  color: var(--texte-doux);
+}
+
+/* ---------- Champs ---------- */
+.champ{ margin-bottom: 18px; }
+
+.champ label{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: #4B5563;
+}
+
+.boite{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: var(--champ);
+  border: 1.5px solid transparent;
+  border-radius: 9px;
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+.boite:focus-within{
+  background: var(--blanc);
+  border-color: var(--nuit);
+  box-shadow: 0 0 0 3px rgba(30,43,126,.10);
+}
+
+.boite .icone{
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  color: #9AA3B2;
+}
+.boite:focus-within .icone{ color: var(--nuit); }
+
+.boite input{
+  flex: 1;
+  min-width: 0;
+  padding: 14px 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+.boite input::placeholder{ color: #9AA3B2; }
+
+/* Bouton œil */
+.oeil{
+  display: flex;
+  padding: 6px;
+  border-radius: 6px;
+  color: #9AA3B2;
+  transition: color var(--transition);
+}
+.oeil svg{ width: 19px; height: 19px; }
+.oeil:hover{ color: var(--nuit); }
+
+/* État d'erreur */
+.boite.invalide{
+  border-color: var(--erreur);
+  background: #FDF3F2;
+}
+.erreur{
+  display: none;
+  margin-top: 7px;
+  font-size: 13px;
+  color: var(--erreur);
+}
+.erreur.visible{ display: block; }
+
+/* ---------- Options ---------- */
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 6px 0 24px;
+  font-size: 14px;
+}
+
+.souvenir{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--texte-doux);
+  cursor: pointer;
+  user-select: none;
+}
+.souvenir input{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.case{
+  width: 19px;
+  height: 19px;
+  border: 1.5px solid #C4CBD8;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  transition: background var(--transition), border-color var(--transition);
+}
+.case svg{
+  width: 12px;
+  height: 12px;
+  color: var(--blanc);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.souvenir input:checked + .case{
+  background: var(--nuit);
+  border-color: var(--nuit);
+}
+.souvenir input:checked + .case svg{ opacity: 1; }
+.souvenir input:focus-visible + .case{
+  outline: 2px solid var(--royal);
+  outline-offset: 2px;
+}
+
+.oubli{
+  color: var(--lien);
+  font-weight: 600;
+  text-decoration: none;
+}
+.oubli:hover{ text-decoration: underline; }
+
+/* ---------- Bouton principal ---------- */
+.bouton{
+  width: 100%;
+  padding: 15px;
+  border-radius: 9px;
+  background: var(--nuit);
+  color: var(--blanc);
+  font-size: 15.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background var(--transition), transform .12s ease, box-shadow var(--transition);
+}
+.bouton:hover{
+  background: var(--nuit-clair);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px -10px rgba(30,43,126,.6);
+}
+.bouton:active{ transform: none; }
+.bouton:disabled{ opacity: .6; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.fleche{
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition);
+}
+.bouton:hover .fleche{ transform: translateX(3px); }
+
+/* ---------- Message et mentions ---------- */
+.message{
+  display: none;
+  margin-top: 16px;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-align: center;
+}
+.message.visible{ display: block; }
+.message.succes{ color: var(--succes); }
+.message.echec{ color: var(--erreur); }
+
+.mention{
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--bordure);
+  font-size: 12.5px;
+  text-align: center;
+  color: var(--texte-doux);
+}
+
+.pied{
+  position: relative;
+  z-index: 1;
+  margin-top: 26px;
+  font-size: 12.5px;
+  color: #A8AEBC;
+}
+
+/* =========================================================
+   5. Responsive
+   ========================================================= */
+@media (max-width: 900px){
+  .page{ grid-template-columns: 1fr; }
+
+  .marque{ padding: 40px 24px 36px; }
+  .logo-cadre{ width: 96px; height: 96px; }
+  .nom{ font-size: 30px; margin-top: 20px; }
+  .sous-titre{ font-size: 14px; }
+  .illustration{ display: none; }
+  .slogan{ font-size: 18px; margin-top: 24px; }
+
+  .acces{ padding: 34px 20px 40px; }
+  .carte{ padding: 30px 24px 26px; box-shadow: 0 1px 2px rgba(30,43,126,.06); }
+  .titre{ font-size: 28px; }
+}
+
+/* Accessibilité : respect du réglage système */
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; animation: none !important; }
+}

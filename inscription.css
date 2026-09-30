@@ -1,0 +1,370 @@
+/* =========================================================
+   SCOLARIS — Module Inscriptions
+   Complément de tableau-de-bord.css
+   ========================================================= */
+
+.contenu-formulaire{ max-width: 900px; }
+
+.explication{
+  max-width: 78ch;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--texte-doux);
+}
+.explication b{ color: var(--texte); font-weight: 600; }
+
+/* ---------- Feuille de saisie ---------- */
+.feuille{
+  background: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  box-shadow: 0 1px 2px rgba(30,43,126,.04);
+  overflow: hidden;
+}
+
+.section{ padding: 26px 30px; border-bottom: 1px solid var(--bordure); }
+.section:last-child{ border-bottom: none; }
+
+.section-titre{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nuit);
+}
+/* Le trait ondulé sous les titres */
+/*.section-titre::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 5px;
+  background-image: radial-gradient(circle at 3px 4px, transparent 2.4px, var(--ambre) 2.6px, transparent 3.2px);
+  background-size: 6px 6px;
+  background-repeat: repeat-x;
+  opacity: .8;
+}
+  */
+
+/* ---------- Grilles de champs ---------- */
+.grille-1{ display: grid; grid-template-columns: minmax(0, 340px); gap: 16px 18px; }
+.grille-2{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 18px; }
+.champ.pleine{ grid-column: 1 / -1; }
+
+.champ label{
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--texte-doux);
+}
+.champ label i{ color: var(--rouge); font-style: normal; }
+
+.champ input,
+.champ select{
+  width: 100%;
+  padding: 11px 13px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 8px;
+  background: var(--blanc);
+  font-size: 14.5px;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.champ select{ cursor: pointer; }
+.champ input:focus,
+.champ select:focus{
+  border-color: var(--ambre);
+  box-shadow: 0 0 0 3px rgba(240,169,59,.18);
+}
+.champ input.invalide{
+  border-color: var(--rouge);
+  background: var(--rouge-pale);
+}
+.aide{ display: block; margin-top: 6px; font-size: 12px; color: var(--texte-doux); }
+
+.places{
+  margin-top: 14px;
+  font-size: 13.5px;
+  color: var(--texte-doux);
+}
+.places b{ color: var(--nuit); }
+.places.complet{ color: var(--rouge); }
+
+/* ---------- Notes explicatives ---------- */
+.note{
+  margin-bottom: 16px;
+  padding: 12px 15px;
+  border-left: 3px solid var(--ambre);
+  border-radius: 0 8px 8px 0;
+  background: #FEF8EE;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6B5B3E;
+}
+
+/* ---------- Frais obligatoires ---------- */
+.frais{ list-style: none; margin-bottom: 18px; }
+.frais li{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 0;
+  font-size: 14.5px;
+  border-bottom: 1px dashed var(--bordure);
+}
+.frais li:last-child{ border-bottom: none; }
+.frais li::before{
+  content: "\2713";
+  color: var(--vert);
+  font-weight: 800;
+}
+.frais li b{ margin-left: auto; font-variant-numeric: tabular-nums; }
+.frais li.attente{ color: var(--texte-doux); font-size: 13.5px; font-style: italic; }
+.frais li.attente::before{ content: "\2022"; color: var(--texte-doux); }
+
+/* ---------- Frais optionnels ---------- */
+.options-frais{ display: grid; gap: 9px; }
+.option{
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 9px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+}
+.option:hover{ border-color: var(--ambre); }
+.option input{ position: absolute; opacity: 0; pointer-events: none; }
+.coche{
+  width: 19px; height: 19px;
+  flex: 0 0 19px;
+  border: 1.5px solid #C4CBD8;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  transition: background var(--transition), border-color var(--transition);
+}
+.coche::after{
+  content: "\2713";
+  color: var(--blanc);
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0;
+}
+.option input:checked + .coche{ background: var(--nuit); border-color: var(--nuit); }
+.option input:checked + .coche::after{ opacity: 1; }
+.option:has(input:checked){ border-color: var(--nuit); background: #FAFBFE; }
+
+/* ---------- Total ---------- */
+.total{
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #FDF1DE 0%, #FBE6C6 100%);
+  border: 1px solid #F0D3A2;
+  text-align: center;
+}
+.total strong{
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: #7A5312;
+  font-variant-numeric: tabular-nums;
+}
+.total > span{
+  display: block;
+  margin-top: 2px;
+  font-size: 12.5px;
+  color: #96702A;
+}
+.total .detail{
+  margin-top: 9px;
+  font-size: 12.5px;
+  color: #8A6725;
+}
+
+.rappel-frais{
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--texte-doux);
+}
+.rappel-frais b{ color: var(--nuit); font-variant-numeric: tabular-nums; }
+
+/* ---------- Barre d'envoi ---------- */
+.barre-envoi{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+.btn.ambre{
+  background: linear-gradient(180deg, var(--ambre-clair) 0%, var(--ambre) 100%);
+  border-color: var(--ambre);
+  color: var(--nuit-fonce);
+  font-weight: 700;
+}
+.btn.ambre:hover{
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px -8px rgba(240,169,59,.8);
+}
+.btn.ambre svg{ width: 16px; height: 16px; }
+
+/* =========================================================
+   FENÊTRE DU CERTIFICAT
+   ========================================================= */
+.fenetre{
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px 16px;
+  overflow-y: auto;
+  background: rgba(15,23,42,.62);
+}
+.fenetre.visible{ display: flex; }
+
+.fenetre-boite{
+  width: 100%;
+  max-width: 720px;
+  background: var(--blanc);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.55);
+  animation: monte .3s cubic-bezier(.2,.7,.3,1) both;
+}
+@keyframes monte{ from{ opacity:0; transform: translateY(18px);} to{ opacity:1; transform:none;} }
+
+.fenetre-barre{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--nuit);
+  color: var(--blanc);
+  font-size: 15px;
+}
+.fermer{ color: rgba(255,255,255,.8); display: flex; }
+.fermer:hover{ color: var(--blanc); }
+
+.fenetre-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--bordure);
+  background: #FAFBFE;
+}
+
+/* ---------- Le document ---------- */
+.certificat{
+  padding: 34px 38px;
+  font-size: 14px;
+  color: #1A1A1A;
+  background: var(--blanc);
+}
+
+.cert-entete{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--nuit);
+}
+.cert-etab{ display: flex; gap: 12px; }
+.cert-etab img{ width: 52px; height: 52px; }
+.cert-etab b{ display: block; font-size: 15px; font-weight: 800; letter-spacing: .02em; }
+.cert-etab i{ display: block; font-size: 12px; color: #555; margin-bottom: 4px; }
+.cert-etab span{ display: block; font-size: 11.5px; color: #555; line-height: 1.5; }
+.cert-annee{ font-size: 11.5px; text-align: right; color: #555; white-space: nowrap; }
+.cert-annee b{ display: block; font-size: 14px; color: #1A1A1A; }
+
+.cert-titre{
+  margin: 26px 0 22px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.cert-corps p{ margin-bottom: 13px; line-height: 1.9; }
+.cert-corps b{ font-weight: 700; }
+
+.cert-pied{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-top: 30px;
+  padding-top: 16px;
+  border-top: 1px dashed #CFCFCF;
+}
+.cert-ref{ font-size: 11.5px; color: #666; }
+.cert-ref span{ display: block; line-height: 1.7; }
+
+.cert-signature{ text-align: center; font-size: 12.5px; }
+.cert-signature span{ display: block; color: #666; margin-bottom: 6px; }
+.cert-signature b{ display: block; margin-bottom: 8px; }
+.cachet{
+  width: 94px; height: 94px;
+  margin: 0 auto;
+  border: 2px solid rgba(30,43,126,.4);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(30,43,126,.6);
+  transform: rotate(-10deg);
+}
+
+/* =========================================================
+   IMPRESSION : seul le certificat sort
+   ========================================================= */
+@media print{
+  body *{ visibility: hidden; }
+  .fenetre, .fenetre-boite, .certificat, .certificat *{ visibility: visible; }
+  .fenetre{
+    position: absolute;
+    inset: 0;
+    display: block;
+    padding: 0;
+    background: none;
+    overflow: visible;
+  }
+  .fenetre-boite{
+    max-width: none;
+    box-shadow: none;
+    border-radius: 0;
+    animation: none;
+  }
+  .fenetre-barre, .fenetre-actions{ display: none; }
+  .certificat{ padding: 0; }
+  @page{ margin: 18mm; }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 720px){
+  .section{ padding: 20px 18px; }
+  .grille-1, .grille-2{ grid-template-columns: 1fr; }
+  .barre-envoi .btn{ flex: 1; justify-content: center; }
+  .certificat{ padding: 22px 18px; }
+  .cert-entete{ flex-direction: column; }
+  .cert-annee{ text-align: left; }
+  .cert-pied{ flex-direction: column; align-items: stretch; gap: 26px; }
+}

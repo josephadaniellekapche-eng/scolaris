@@ -1,0 +1,82 @@
+/* =========================================================
+   SCOLARIS — Module Finance
+   Complément de tableau-de-bord.css / eleves.css / bulletins.css
+   Partagé par : recu.html, paiements.html, livret-caisse.html,
+   impayes.html, depenses.html, rapports-financiers.html
+   ========================================================= */
+
+/* ---------- Reçu ---------- */
+.carte-recu{ max-width: 620px; margin: 0 auto; padding: 24px; }
+
+.recu-numero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 2px dashed var(--bordure);
+}
+.recu-numero span{ font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--texte-doux); }
+.recu-numero b{ font-size: 20px; font-weight: 800; color: var(--nuit); font-variant-numeric: tabular-nums; }
+
+.recu-donnees{ grid-template-columns: repeat(2, 1fr); margin-bottom: 18px; }
+
+.recu-montant{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  border-radius: var(--rayon);
+  background: var(--royal-pale);
+}
+.recu-montant span{ font-size: 13px; font-weight: 700; color: var(--nuit); }
+.recu-montant b{ font-size: 24px; font-weight: 800; color: var(--nuit); font-variant-numeric: tabular-nums; }
+
+.recu-pied{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid var(--bordure);
+}
+.recu-pied span{ display: block; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--texte-doux); }
+.recu-pied b{ display: block; margin-top: 4px; font-size: 14px; color: var(--nuit); }
+
+.recu-signature{ margin-top: 34px; text-align: right; font-size: 12px; color: var(--texte-doux); font-style: italic; }
+
+#recuCodeVerification{ font-family: "Courier New", monospace; letter-spacing: .05em; }
+
+@media print{
+  .carte-recu{ box-shadow: none; border: 1px solid #999; }
+  .recu-montant{ background: none; border: 1px solid #999; }
+}
+
+/* ---------- Filtres et segments (Paiements, Livret, Impayés, Dépenses, Rapports) ---------- */
+.finance-kpi{ margin-bottom: 20px; }
+
+.tableau td.montant-positif{ color: var(--vert); font-weight: 700; }
+.tableau td.montant-negatif{ color: var(--rouge); font-weight: 700; }
+
+.ligne-annulee{ opacity: .5; text-decoration: line-through; }
+
+/* ---------- Formulaires en carte (encaissement, dépense, frais) ---------- */
+.carte-formulaire{ padding: 18px; margin-bottom: 18px; }
+.carte-formulaire .grille-champs{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 14px; }
+.carte-formulaire .champ label{ display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; color: var(--texte-doux); }
+.carte-formulaire .champ input, .carte-formulaire .champ select, .carte-formulaire .champ textarea{
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 8px;
+  background: var(--blanc);
+  font-size: 13.5px;
+  font-family: inherit;
+  outline: none;
+}
+.carte-formulaire .champ input:focus, .carte-formulaire .champ select:focus, .carte-formulaire .champ textarea:focus{ border-color: var(--nuit); }
+
+@media (max-width: 860px){
+  .carte-formulaire .grille-champs, .recu-donnees{ grid-template-columns: 1fr; }
+}

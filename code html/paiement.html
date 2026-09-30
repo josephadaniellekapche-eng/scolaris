@@ -1,0 +1,288 @@
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed-dim":"#8dcdff","surface":"#f7f9fc","on-background":"#191c1e","surface-container-high":"#e6e8eb","on-secondary-fixed":"#001e30","on-tertiary-fixed-variant":"#454747","on-tertiary-container":"#969898","secondary":"#006493","background":"#f7f9fc","primary-container":"#1a237e","primary":"#000666","outline-variant":"#c6c5d4","on-secondary-container":"#004162","on-primary-fixed":"#000767","on-error":"#ffffff","surface-variant":"#e0e3e6","surface-tint":"#4c56af","tertiary-container":"#2e3030","on-surface-variant":"#454652","tertiary-fixed":"#e2e2e2","secondary-fixed":"#cae6ff","primary-fixed-dim":"#bdc2ff","on-primary":"#ffffff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","surface-container":"#eceef1","error-container":"#ffdad6","primary-fixed":"#e0e0ff","tertiary":"#191b1c","on-tertiary-fixed":"#1a1c1c","on-surface":"#191c1e","surface-bright":"#f7f9fc","secondary-container":"#24b2fe","outline":"#767683","on-primary-fixed-variant":"#343d96","surface-container-highest":"#e0e3e6","on-tertiary":"#ffffff","surface-container-low":"#f2f4f7","on-primary-container":"#8690ee","on-secondary-fixed-variant":"#004b70","on-error-container":"#93000a","inverse-primary":"#bdc2ff","error":"#ba1a1a","inverse-surface":"#2d3133","surface-dim":"#d8dadd","tertiary-fixed-dim":"#c6c6c7","inverse-on-surface":"#eff1f4"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"base":"8px","sm":"8px","md":"16px","gutter":"24px","lg":"24px","margin-desktop":"40px","margin-mobile":"16px","xl":"32px","xs":"4px"},"fontFamily":{"headline-lg-mobile":["Inter"],"body-md":["Inter"],"title-md":["Inter"],"headline-lg":["Inter"],"display":["Inter"],"body-lg":["Inter"],"caption":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"title-lg":["Inter"]},"fontSize":{"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}],"display":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"caption":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"600"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-72 bg-primary text-on-primary flex flex-col z-50 shadow-xl"><div class="p-lg flex items-center gap-md border-b border-on-primary/10"><img alt="Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsQ1wNoyT7QBpSwsZGXeo3o2x8j5zAU4S7HOeiTYT7SOpRHC2BZIY-QcXbsMrulwIN179Sa4Rui2AbJ060SUVK-v0Ehn-tzti0K8AVhG5lb5Ql95-APCq1zeKNgtIaMdSiZBzYXFQ0hnVXTswMbZ5hr0FA9U6SH2lerZOOUhVo7VpsMipVwb6j6o6HONPm4R9a71-c9eE-FgoD911uzii3xEPDOd2UUGn84LvwNUOdykURm6HuSLq_x_hzH"/><span class="font-title-lg text-white">Lycée Classic</span></div><nav class="flex-1 overflow-y-auto py-md space-y-xs px-md" data-active-classes="bg-secondary-container text-on-secondary-container rounded-lg"><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined">dashboard</span>Tableau de bord</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="eleves" href="#"><span class="material-symbols-outlined">school</span>Élèves</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="enseignants" href="#"><span class="material-symbols-outlined">co_present</span>Enseignants</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="classes" href="#"><span class="material-symbols-outlined">meeting_room</span>Classes</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="matieres" href="#"><span class="material-symbols-outlined">menu_book</span>Matières</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="notes" href="#"><span class="material-symbols-outlined">grade</span>Notes</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="emploi-du-temps" href="#"><span class="material-symbols-outlined">calendar_month</span>Emploi du temps</a><a aria-current="page" class="flex items-center gap-md px-md py-sm transition-all bg-secondary-container text-on-secondary-container rounded-lg" data-path="paiements" href="#"><span class="material-symbols-outlined">payments</span>Paiements</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="absences" href="#"><span class="material-symbols-outlined">event_busy</span>Absences</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="communications" href="#"><span class="material-symbols-outlined">chat</span>Communications</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="rapports" href="#"><span class="material-symbols-outlined">monitoring</span>Rapports</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="utilisateurs" href="#"><span class="material-symbols-outlined">group</span>Utilisateurs</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="parametres" href="#"><span class="material-symbols-outlined">settings</span>Paramètres</a></nav></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 px-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center bg-surface-container-low px-md py-xs rounded-lg w-96"><span class="material-symbols-outlined text-on-surface-variant">search</span><input class="bg-transparent border-none outline-none px-sm w-full text-body-md" placeholder="Rechercher un élève, enseignant..." type="text"/></div><div class="flex items-center gap-lg"><div class="flex gap-md text-on-surface-variant"><button class="hover:text-primary transition-colors relative"><span class="material-symbols-outlined">notifications</span><span class="absolute -top-1 -right-1 w-2 h-2 bg-error rounded-full"></span></button><button class="hover:text-primary transition-colors relative"><span class="material-symbols-outlined">mail</span></button></div><div class="flex items-center gap-md pl-lg border-l border-outline-variant"><div class="text-right hidden sm:block"><p class="text-label-md font-bold text-on-surface">Admin Lycée</p><p class="text-caption text-on-surface-variant">Directeur</p></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AP1WRLsCTiFncrDC7UwqYuNEqI8y9nsHjyRiPSYXNorNSvdMFNBdb3CHuuVk6jy6HGoy12MnJr29qFO7haR-wseVHxCLCkC7rGgIKMNkq_fx7R14g5LlLmlJREcHTAEkEjMpMO71NSK4QGYTATSMAwM9RjZu1H3-JK5OAKacv6Le-F86JTDAk7PiVsDecBPRwBBe75i7HW9keAhnxAcjz99p832MpJr3RrCB4bV4rQ9EXFy_nzMIXuODJwMYqRk9"/></div></div></header><main class="pt-16 min-h-screen bg-surface"><div class="flex flex-col w-full p-lg gap-xl max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-md relative">
+<div class="absolute -top-16 -left-16 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
+<div>
+<div class="flex items-center gap-sm mb-xs">
+<span class="material-symbols-outlined text-secondary opacity-50" style="font-size: 1.5rem; writing-mode: vertical-rl; transform: rotate(180deg);">payments</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Paiements & Frais scolaires</h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span> Gestion financière année scolaire 2023-2024
+      </p>
+</div>
+<div class="flex items-center gap-md">
+<button class="flex items-center gap-sm px-lg py-sm bg-surface-container text-on-surface hover:bg-surface-variant transition-colors rounded-lg font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-lg">receipt_long</span> Imprimer reçu
+      </button>
+<button class="flex items-center gap-sm px-lg py-sm bg-primary text-on-primary hover:bg-primary/90 transition-all rounded-lg font-label-md text-label-md shadow-md hover:shadow-lg hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-lg">add_circle</span> Enregistrer un paiement
+      </button>
+</div>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Stat 1: Total Encaissé -->
+<div class="bg-surface-container-low rounded-xl p-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-md opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined" style="font-size: 4rem;">account_balance</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-xs">Total Encaissé</p>
+<div class="flex items-baseline gap-xs">
+<span class="font-display text-display text-primary">45,2M</span>
+<span class="font-title-md text-title-md text-on-surface-variant">FCFA</span>
+</div>
+<div class="mt-md flex items-center gap-xs text-error">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="font-label-md text-label-md">+12% vs mois dernier</span>
+</div>
+</div>
+<!-- Stat 2: En Attente -->
+<div class="bg-surface-container-low rounded-xl p-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-md opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined" style="font-size: 4rem;">pending_actions</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-xs">En Attente</p>
+<div class="flex items-baseline gap-xs">
+<span class="font-display text-display text-secondary">3,4M</span>
+<span class="font-title-md text-title-md text-on-surface-variant">FCFA</span>
+</div>
+<div class="mt-md w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+<!-- Stat 3: Total Paiements -->
+<div class="bg-surface-container-low rounded-xl p-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-md opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined" style="font-size: 4rem;">receipt</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-xs">Paiements ce mois</p>
+<div class="flex items-baseline gap-xs">
+<span class="font-display text-display text-on-surface">342</span>
+</div>
+<div class="mt-md flex -space-x-2">
+<img class="w-6 h-6 rounded-full border-2 border-surface object-cover" data-alt="A small circular avatar of a student, friendly face, soft lighting, professional school setting. Cyan and light blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6rkJfQSPiahgoL4IZZmbWV-5F0mItJgAjU6zJlhZ_o7gp78ZNjiEq9EIaId5m5_owpzSyYpRmzmz6OrIJJcQHUIOHxoXjkwUelaD5TfeZZLjWsAw2A2zCanQfe7VtAGuEPphDsQNKadAxiDMqneS1ARNkWV8nG9kNbsaEsAXebs6CGcOUPM2Qfiy-UjJWR6L3yOodqUtsc4BzEbdtIZ4OzjVEnnwyPRCpsCS8N1-6q8JqzA3wXKrCrQ"/>
+<img class="w-6 h-6 rounded-full border-2 border-surface object-cover" data-alt="A small circular avatar of a parent, smiling, soft lighting. Deep blue and neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Wfit67-ArtevP2YxjRGVQW2nYGU6PDs9YyCCR9zOFtZrsy9Bg9lDcIdRew6oN5cn5MKphF7VlHRlwvd3pb0XirfA3xiwDW5a27K0FXgCwZ55d7BbZkZkz_0vl0YtrooVpcMdDzHDyYEIh4xxDnns5mZtrdjk154bIbZ3dqKWjGmjilrJeQ0EWalCxn0WRdWZHsdYkO9rDWT2D2EjIdCzLDIK1Z92HhrohWPU_5ChNOba4A0VJ46SQg"/>
+<img class="w-6 h-6 rounded-full border-2 border-surface object-cover" data-alt="A small circular avatar of an administrator, focused expression. Professional setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADS3wbKU7IFphyhQIGqQt_dVAHCtjxn4GlsIeAp4E7VyiRcMXD6XfphoI-5n5ZrJd0_HOYMJJWFoY1BCyLimfzpM8-LQZY4an9rvJh9IFvodSL-mh0p8dLdsNpjHhdDWIxNjU7fobHBDlJlhJVBBpJyYAvF0dK8koj9KFjk_Q6YZ7Lh8e36LToG8aNz8xBIsS9K4fGLn449Oicso9nJTyGWj0LPVzEhME0bN-6b0DYluJHkqX6W9JIEw"/>
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-surface-variant flex items-center justify-center font-caption text-[10px] text-on-surface-variant">+3k</div>
+</div>
+</div>
+<!-- Stat 4: Impayés -->
+<div class="bg-error-container rounded-xl p-md shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-md opacity-10 group-hover:opacity-20 transition-opacity text-on-error-container">
+<span class="material-symbols-outlined" style="font-size: 4rem;">warning</span>
+</div>
+<p class="font-caption text-caption text-on-error-container uppercase tracking-wider mb-xs">Impayés critiques</p>
+<div class="flex items-baseline gap-xs">
+<span class="font-display text-display text-on-error-container">1,8M</span>
+<span class="font-title-md text-title-md text-on-error-container/80">FCFA</span>
+</div>
+<div class="mt-md flex items-center gap-xs text-on-error-container">
+<span class="material-symbols-outlined text-sm">notification_important</span>
+<span class="font-label-md text-label-md">24 dossiers à relancer</span>
+</div>
+</div>
+</div>
+<!-- Main Content: Filters & Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm flex flex-col mt-md">
+<!-- Toolbar -->
+<div class="p-md flex flex-col md:flex-row items-center justify-between gap-md bg-surface-container-low/50 rounded-t-xl">
+<div class="flex items-center gap-sm bg-surface-container px-sm py-xs rounded-lg w-full md:w-80">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent outline-none font-body-md text-body-md w-full placeholder:text-on-surface-variant/60" placeholder="Rechercher élève, responsable, reçu..." type="text"/>
+</div>
+<div class="flex items-center gap-sm w-full md:w-auto overflow-x-auto pb-2 md:pb-0 hide-scrollbar">
+<div class="flex items-center gap-xs bg-surface-container px-sm py-xs rounded-lg cursor-pointer hover:bg-surface-variant transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-sm text-on-surface-variant">filter_list</span>
+<span class="font-label-md text-label-md text-on-surface">Toutes les classes</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_drop_down</span>
+</div>
+<div class="flex items-center gap-xs bg-surface-container px-sm py-xs rounded-lg cursor-pointer hover:bg-surface-variant transition-colors whitespace-nowrap">
+<span class="font-label-md text-label-md text-on-surface">Tous les statuts</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_drop_down</span>
+</div>
+<div class="flex items-center gap-xs bg-surface-container px-sm py-xs rounded-lg cursor-pointer hover:bg-surface-variant transition-colors whitespace-nowrap">
+<span class="font-label-md text-label-md text-on-surface">Date: Ce mois</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/30 font-title-md text-title-md text-on-surface-variant">
+<th class="p-md font-medium">Élève</th>
+<th class="p-md font-medium">Classe</th>
+<th class="p-md font-medium hidden sm:table-cell">Responsable</th>
+<th class="p-md font-medium">Type de frais</th>
+<th class="p-md font-medium text-right">Montant</th>
+<th class="p-md font-medium hidden md:table-cell">Date</th>
+<th class="p-md font-medium">Statut</th>
+<th class="p-md font-medium text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="border-b border-surface-container-highest/50 hover:bg-surface-container-lowest/80 transition-colors group">
+<td class="p-sm">
+<div class="flex items-center gap-sm">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Portrait of a young male student, smiling softly, natural lighting, wearing a simple blue uniform. Studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnnZMc67IGRCJbKlMuulkRuWis7vKlSkt3euAryLbbid71ffVBlgwpWn3Umgn65IHeX7ANFfoPoFROz-YQz_CjYpJ7_Pgfe0eBplreDzw_0LKmiszkyidvdXpYuYkYam6N7IxRst9KyAKhQFGKoNQZeDSMiVRTsr8jF5gdGjNJFXH51yGh8jNaOA8y6b5pgW0zn1-GdZl7TddzSmt8_cX3aW-jPGd_1ff3MzLMCwlQK5r_BzrzmCCX1g"/>
+<div>
+<div class="font-title-md text-title-md">Amadou Diallo</div>
+<div class="font-caption text-caption text-on-surface-variant">MAT-2023-014</div>
+</div>
+</div>
+</td>
+<td class="p-sm text-on-surface-variant">Terminale D</td>
+<td class="p-sm hidden sm:table-cell text-on-surface-variant">
+<div>Fatou Diallo</div>
+<div class="font-caption text-caption">+237 6XX XX XX XX</div>
+</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-md bg-secondary-container/20 text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">school</span> Scolarité T1
+              </span>
+</td>
+<td class="p-sm text-right font-title-md text-title-md">150 000</td>
+<td class="p-sm hidden md:table-cell text-on-surface-variant font-caption text-caption">12 Oct 2023</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-[#E6F4EA] text-[#137333] font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-[#137333]"></span> Payé
+              </span>
+</td>
+<td class="p-sm text-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 opacity-0 group-hover:opacity-100 focus:opacity-100">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b border-surface-container-highest/50 hover:bg-surface-container-lowest/80 transition-colors group">
+<td class="p-sm">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-title-md">EK</div>
+<div>
+<div class="font-title-md text-title-md">Elise Kouam</div>
+<div class="font-caption text-caption text-on-surface-variant">MAT-2023-089</div>
+</div>
+</div>
+</td>
+<td class="p-sm text-on-surface-variant">3ème A</td>
+<td class="p-sm hidden sm:table-cell text-on-surface-variant">
+<div>Pierre Kouam</div>
+<div class="font-caption text-caption">+237 6XX XX XX XX</div>
+</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-md bg-tertiary-container/20 text-on-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">directions_bus</span> Transport
+              </span>
+</td>
+<td class="p-sm text-right font-title-md text-title-md">25 000</td>
+<td class="p-sm hidden md:table-cell text-on-surface-variant font-caption text-caption">15 Oct 2023</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-[#FFF8E1] text-[#F57F17] font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-[#F57F17]"></span> En attente
+              </span>
+</td>
+<td class="p-sm text-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 opacity-0 group-hover:opacity-100 focus:opacity-100">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-surface-container-highest/50 hover:bg-surface-container-lowest/80 transition-colors group bg-error-container/10">
+<td class="p-sm">
+<div class="flex items-center gap-sm">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Portrait of a female student looking slightly concerned, soft lighting, school setting background blurred. Warm tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAJeApci_FhFvyB6Ke1LZSu4LS1E-BLycpIcBU3rHjzR2GeonF1x-UHyejSaXMnShWnI3av3GIPjsBko4bLi51GwZKkR8jdfuAnSQyYBK_w6PaXgseDGxlsjDsyRNfL313XtjpxYLpgtYq-o-kPygkqrs8JP3l8zsX7mDnB0-dtLA-0_6UdM5M8h0ES-ZDNRhhxpVZrNXXYrtYLm3f3HncOy4_tJgcebYYqsGyPPisalpg8KOgZAZqCw"/>
+<div>
+<div class="font-title-md text-title-md">Sarah Mvondo</div>
+<div class="font-caption text-caption text-on-surface-variant">MAT-2023-112</div>
+</div>
+</div>
+</td>
+<td class="p-sm text-on-surface-variant">1ère C</td>
+<td class="p-sm hidden sm:table-cell text-on-surface-variant">
+<div>Jean Mvondo</div>
+<div class="font-caption text-caption">+237 6XX XX XX XX</div>
+</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-md bg-secondary-container/20 text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">school</span> Scolarité T1
+              </span>
+</td>
+<td class="p-sm text-right font-title-md text-title-md">150 000</td>
+<td class="p-sm hidden md:table-cell text-error font-caption text-caption">Retard 15j</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-[#FCE8E6] text-[#D93025] font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-[#D93025]"></span> Impayé
+              </span>
+</td>
+<td class="p-sm text-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 opacity-0 group-hover:opacity-100 focus:opacity-100">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-lowest/80 transition-colors group">
+<td class="p-sm">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-title-md">CB</div>
+<div>
+<div class="font-title-md text-title-md">Cédric Balla</div>
+<div class="font-caption text-caption text-on-surface-variant">MAT-2023-045</div>
+</div>
+</div>
+</td>
+<td class="p-sm text-on-surface-variant">6ème B</td>
+<td class="p-sm hidden sm:table-cell text-on-surface-variant">
+<div>Marie Balla</div>
+<div class="font-caption text-caption">+237 6XX XX XX XX</div>
+</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-md bg-secondary-container/20 text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[12px]">restaurant</span> Cantine T1
+              </span>
+</td>
+<td class="p-sm text-right font-title-md text-title-md">
+<div class="flex flex-col items-end">
+<span>45 000</span>
+<span class="font-caption text-caption text-on-surface-variant font-normal">/ 90 000</span>
+</div>
+</td>
+<td class="p-sm hidden md:table-cell text-on-surface-variant font-caption text-caption">10 Oct 2023</td>
+<td class="p-sm">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-[#E8F0FE] text-[#1967D2] font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-[#1967D2]"></span> Partiel
+              </span>
+</td>
+<td class="p-sm text-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1 opacity-0 group-hover:opacity-100 focus:opacity-100">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="p-md border-t border-surface-container-highest/50 flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant">Affichage 1-4 sur 124 paiements</span>
+<div class="flex gap-xs">
+<button class="w-8 h-8 flex items-center justify-center rounded-md bg-surface-container hover:bg-surface-variant transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md bg-primary text-on-primary font-label-md">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md bg-surface-container hover:bg-surface-variant transition-colors text-on-surface-variant font-label-md">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md bg-surface-container hover:bg-surface-variant transition-colors text-on-surface-variant font-label-md">3</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md bg-surface-container hover:bg-surface-variant transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

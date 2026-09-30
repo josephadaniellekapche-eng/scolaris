@@ -1,0 +1,94 @@
+/* =========================================================
+   SCOLARIS — Module Notes
+   Complément de tableau-de-bord.css / eleves.css
+   ========================================================= */
+
+.fin-centre{ text-align: center; }
+
+.filtres-hauts{ margin-bottom: 16px; align-items: center; }
+.filtres-hauts select{ min-width: 220px; }
+
+/* ---------- Sélecteur de trimestre / séquence ---------- */
+.segments{
+  display: flex;
+  padding: 3px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 9px;
+  background: var(--champ);
+}
+#segmentsTrimestre{ margin-left: auto; }
+.segment{
+  padding: 7px 16px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--texte-doux);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.segment.actif{ background: var(--blanc); color: var(--nuit); box-shadow: 0 1px 3px rgba(30,43,126,.12); }
+.segment:not(.actif):hover{ color: var(--nuit); }
+.segments:disabled, .segments.desactive .segment{ opacity: .45; pointer-events: none; }
+
+/* ---------- Aide ---------- */
+.aide-note{
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--bordure);
+  background: var(--royal-pale);
+  color: var(--nuit);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.tableau th.entete-moyenne{ background: var(--royal-pale); }
+
+/* ---------- Grille de saisie ---------- */
+.tableau td.cellule-note{ text-align: center; }
+.compteur-note{
+  display: inline-flex;
+  align-items: stretch;
+  border: 1.5px solid var(--bordure);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.compteur-note-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  border: none;
+  background: var(--royal-pale);
+  color: var(--royal);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.compteur-note-btn:hover{ background: var(--royal); color: #fff; }
+.compteur-note-btn:active{ filter: brightness(0.95); }
+.champ-note{
+  width: 52px;
+  padding: 8px 4px;
+  border: none;
+  border-left: 1.5px solid var(--bordure);
+  border-right: 1.5px solid var(--bordure);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--nuit);
+  outline: none;
+  -moz-appearance: textfield;
+}
+.champ-note::-webkit-outer-spin-button,
+.champ-note::-webkit-inner-spin-button{ -webkit-appearance: none; margin: 0; }
+.champ-note.faible{ color: var(--rouge); }
+.champ-note.bonne{ color: var(--vert); }
+
+@media (max-width: 900px){
+  .filtres-hauts{ flex-direction: column; align-items: stretch; }
+  .filtres-hauts select{ width: 100%; }
+  .segments{ margin-left: 0; }
+}

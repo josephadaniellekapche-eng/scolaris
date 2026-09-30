@@ -1,0 +1,310 @@
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed-dim":"#8dcdff","surface":"#f7f9fc","on-background":"#191c1e","surface-container-high":"#e6e8eb","on-secondary-fixed":"#001e30","on-tertiary-fixed-variant":"#454747","on-tertiary-container":"#969898","secondary":"#006493","background":"#f7f9fc","primary-container":"#1a237e","primary":"#000666","outline-variant":"#c6c5d4","on-secondary-container":"#004162","on-primary-fixed":"#000767","on-error":"#ffffff","surface-variant":"#e0e3e6","surface-tint":"#4c56af","tertiary-container":"#2e3030","on-surface-variant":"#454652","tertiary-fixed":"#e2e2e2","secondary-fixed":"#cae6ff","primary-fixed-dim":"#bdc2ff","on-primary":"#ffffff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","surface-container":"#eceef1","error-container":"#ffdad6","primary-fixed":"#e0e0ff","tertiary":"#191b1c","on-tertiary-fixed":"#1a1c1c","on-surface":"#191c1e","surface-bright":"#f7f9fc","secondary-container":"#24b2fe","outline":"#767683","on-primary-fixed-variant":"#343d96","surface-container-highest":"#e0e3e6","on-tertiary":"#ffffff","surface-container-low":"#f2f4f7","on-primary-container":"#8690ee","on-secondary-fixed-variant":"#004b70","on-error-container":"#93000a","inverse-primary":"#bdc2ff","error":"#ba1a1a","inverse-surface":"#2d3133","surface-dim":"#d8dadd","tertiary-fixed-dim":"#c6c6c7","inverse-on-surface":"#eff1f4"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"base":"8px","sm":"8px","md":"16px","gutter":"24px","lg":"24px","margin-desktop":"40px","margin-mobile":"16px","xl":"32px","xs":"4px"},"fontFamily":{"headline-lg-mobile":["Inter"],"body-md":["Inter"],"title-md":["Inter"],"headline-lg":["Inter"],"display":["Inter"],"body-lg":["Inter"],"caption":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"title-lg":["Inter"]},"fontSize":{"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}],"display":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"caption":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"600"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-72 bg-primary text-on-primary flex flex-col z-50 shadow-xl"><div class="p-lg flex items-center gap-md border-b border-on-primary/10"><img alt="Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsQ1wNoyT7QBpSwsZGXeo3o2x8j5zAU4S7HOeiTYT7SOpRHC2BZIY-QcXbsMrulwIN179Sa4Rui2AbJ060SUVK-v0Ehn-tzti0K8AVhG5lb5Ql95-APCq1zeKNgtIaMdSiZBzYXFQ0hnVXTswMbZ5hr0FA9U6SH2lerZOOUhVo7VpsMipVwb6j6o6HONPm4R9a71-c9eE-FgoD911uzii3xEPDOd2UUGn84LvwNUOdykURm6HuSLq_x_hzH"/><span class="font-title-lg text-white">Lycée Classic</span></div><nav class="flex-1 overflow-y-auto py-md space-y-xs px-md" data-active-classes="bg-secondary-container text-on-secondary-container rounded-lg"><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined">dashboard</span>Tableau de bord</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="eleves" href="#"><span class="material-symbols-outlined">school</span>Élèves</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="enseignants" href="#"><span class="material-symbols-outlined">co_present</span>Enseignants</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="classes" href="#"><span class="material-symbols-outlined">meeting_room</span>Classes</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="matieres" href="#"><span class="material-symbols-outlined">menu_book</span>Matières</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="notes" href="#"><span class="material-symbols-outlined">grade</span>Notes</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="emploi-du-temps" href="#"><span class="material-symbols-outlined">calendar_month</span>Emploi du temps</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="paiements" href="#"><span class="material-symbols-outlined">payments</span>Paiements</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="absences" href="#"><span class="material-symbols-outlined">event_busy</span>Absences</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="communications" href="#"><span class="material-symbols-outlined">chat</span>Communications</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="rapports" href="#"><span class="material-symbols-outlined">monitoring</span>Rapports</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="utilisateurs" href="#"><span class="material-symbols-outlined">group</span>Utilisateurs</a><a class="flex items-center gap-md px-md py-sm text-label-md text-on-primary/80 hover:bg-white/10 hover:text-white transition-all" data-path="parametres" href="#"><span class="material-symbols-outlined">settings</span>Paramètres</a></nav></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 px-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center bg-surface-container-low px-md py-xs rounded-lg w-96"><span class="material-symbols-outlined text-on-surface-variant">search</span><input class="bg-transparent border-none outline-none px-sm w-full text-body-md" placeholder="Rechercher un élève, enseignant..." type="text"/></div><div class="flex items-center gap-lg"><div class="flex gap-md text-on-surface-variant"><button class="hover:text-primary transition-colors relative"><span class="material-symbols-outlined">notifications</span><span class="absolute -top-1 -right-1 w-2 h-2 bg-error rounded-full"></span></button><button class="hover:text-primary transition-colors relative"><span class="material-symbols-outlined">mail</span></button></div><div class="flex items-center gap-md pl-lg border-l border-outline-variant"><div class="text-right hidden sm:block"><p class="text-label-md font-bold text-on-surface">Admin Lycée</p><p class="text-caption text-on-surface-variant">Directeur</p></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AP1WRLsCTiFncrDC7UwqYuNEqI8y9nsHjyRiPSYXNorNSvdMFNBdb3CHuuVk6jy6HGoy12MnJr29qFO7haR-wseVHxCLCkC7rGgIKMNkq_fx7R14g5LlLmlJREcHTAEkEjMpMO71NSK4QGYTATSMAwM9RjZu1H3-JK5OAKacv6Le-F86JTDAk7PiVsDecBPRwBBe75i7HW9keAhnxAcjz99p832MpJr3RrCB4bV4rQ9EXFy_nzMIXuODJwMYqRk9"/></div></div></header><main class="pt-16 min-h-screen bg-surface"><div class="flex flex-col w-full pb-32">
+<div class="sticky top-16 z-30 flex items-center justify-between px-margin-desktop py-md bg-surface/90 backdrop-blur-md mb-xl shadow-sm">
+<div>
+<h1 class="text-headline-lg text-on-surface">Paramètres de l'établissement</h1>
+<p class="text-body-md text-on-surface-variant mt-xs">Gérez la configuration globale de Lycée Classic.</p>
+</div>
+<div class="flex gap-md">
+<button class="px-lg py-sm rounded-lg bg-surface-container-high text-on-surface-variant font-title-md hover:bg-surface-variant transition-colors">Annuler</button>
+<button class="px-lg py-sm rounded-lg bg-primary text-on-primary font-title-md hover:bg-primary-container transition-colors shadow-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]">save</span>
+        Enregistrer les modifications
+      </button>
+</div>
+</div>
+<div class="px-margin-desktop grid grid-cols-12 gap-lg relative">
+<div class="col-span-3 sticky top-48 h-fit hidden lg:block">
+<nav class="flex flex-col gap-sm">
+<a class="px-md py-sm rounded-lg text-title-md text-primary bg-primary/10 flex items-center gap-sm transition-colors hover:bg-primary/20" href="#infos">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+          Infos établissement
+        </a>
+<a class="px-md py-sm rounded-lg text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors flex items-center gap-sm" href="#annee">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+          Année scolaire
+        </a>
+<a class="px-md py-sm rounded-lg text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors flex items-center gap-sm" href="#academique">
+<span class="material-symbols-outlined text-[20px]">school</span>
+          Paramètres académiques
+        </a>
+<a class="px-md py-sm rounded-lg text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors flex items-center gap-sm" href="#notifications">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+          Notifications
+        </a>
+<a class="px-md py-sm rounded-lg text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors flex items-center gap-sm" href="#securite">
+<span class="material-symbols-outlined text-[20px]">security</span>
+          Sécurité
+        </a>
+</nav>
+<div class="mt-xl p-md bg-secondary-container/20 rounded-xl">
+<h4 class="text-title-md text-secondary mb-sm flex items-center gap-xs">
+<span class="material-symbols-outlined">info</span>
+          Dernière synchronisation
+        </h4>
+<p class="text-body-md text-on-surface-variant">Il y a 5 minutes par Admin Lycée.</p>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-9 flex flex-col gap-xl">
+<!-- 1. Infos établissement -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-xl scroll-mt-32" id="infos">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px]">domain</span>
+</div>
+<h2 class="text-headline-md text-on-surface">Informations de l'établissement</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg items-start">
+<div class="md:col-span-4 flex flex-col items-center gap-md">
+<div class="relative group cursor-pointer">
+<div class="w-40 h-40 rounded-xl overflow-hidden bg-surface-variant shadow-md relative">
+<img alt="Logo Lycée Classic" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsQ1wNoyT7QBpSwsZGXeo3o2x8j5zAU4S7HOeiTYT7SOpRHC2BZIY-QcXbsMrulwIN179Sa4Rui2AbJ060SUVK-v0Ehn-tzti0K8AVhG5lb5Ql95-APCq1zeKNgtIaMdSiZBzYXFQ0hnVXTswMbZ5hr0FA9U6SH2lerZOOUhVo7VpsMipVwb6j6o6HONPm4R9a71-c9eE-FgoD911uzii3xEPDOd2UUGn84LvwNUOdykURm6HuSLq_x_hzH"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-[32px]">photo_camera</span>
+</div>
+</div>
+</div>
+<div class="text-center">
+<p class="text-title-md text-on-surface">Logo officiel</p>
+<p class="text-caption text-on-surface-variant">PNG, JPG ou SVG. Max 5MB.</p>
+</div>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs sm:col-span-2">
+<label class="text-label-md text-on-surface-variant uppercase tracking-wider">Nom de l'établissement</label>
+<input class="bg-surface-container w-full rounded-lg px-md py-sm text-body-lg text-on-surface outline-none focus:ring-2 focus:ring-primary transition-shadow" type="text" value="Lycée Classic"/>
+</div>
+<div class="flex flex-col gap-xs sm:col-span-2">
+<label class="text-label-md text-on-surface-variant uppercase tracking-wider">Slogan / Devise</label>
+<input class="bg-surface-container w-full rounded-lg px-md py-sm text-body-lg text-on-surface outline-none focus:ring-2 focus:ring-primary transition-shadow" type="text" value="L'excellence pour tous, la réussite pour chacun."/>
+</div>
+<div class="flex flex-col gap-xs sm:col-span-2">
+<label class="text-label-md text-on-surface-variant uppercase tracking-wider">Adresse principale</label>
+<input class="bg-surface-container w-full rounded-lg px-md py-sm text-body-lg text-on-surface outline-none focus:ring-2 focus:ring-primary transition-shadow" type="text" value="Quartier Administratif, BP 1234, Yaoundé"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="text-label-md text-on-surface-variant uppercase tracking-wider">Téléphone</label>
+<input class="bg-surface-container w-full rounded-lg px-md py-sm text-body-lg text-on-surface outline-none focus:ring-2 focus:ring-primary transition-shadow" type="tel" value="+237 600 00 00 00"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="text-label-md text-on-surface-variant uppercase tracking-wider">Email de contact</label>
+<input class="bg-surface-container w-full rounded-lg px-md py-sm text-body-lg text-on-surface outline-none focus:ring-2 focus:ring-primary transition-shadow" type="email" value="contact@lyceeclassic.edu.cm"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Année scolaire -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-xl scroll-mt-32" id="annee">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+</div>
+<h2 class="text-headline-md text-on-surface">Année scolaire en cours</h2>
+</div>
+<div class="bg-surface-container rounded-xl p-lg mb-lg flex flex-wrap items-center justify-between gap-md relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Année active</p>
+<p class="text-display text-primary flex items-baseline gap-sm">
+              2023 <span class="text-headline-lg text-on-surface-variant">/</span> 2024
+            </p>
+</div>
+<div class="flex gap-sm">
+<button class="px-md py-sm rounded-lg bg-surface-container-high text-on-surface-variant font-title-md hover:bg-surface-variant transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">history</span>
+              Archives
+            </button>
+<button class="px-md py-sm rounded-lg text-secondary bg-secondary-container/30 hover:bg-secondary-container/50 font-title-md transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add</span>
+              Nouvelle année
+            </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="flex flex-col gap-xs">
+<label class="text-label-md text-on-surface-variant uppercase tracking-wider">Date de rentrée</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-on-surface-variant">event</span>
+<input class="bg-surface-container w-full rounded-lg pl-10 pr-md py-sm text-body-lg text-on-surface outline-none focus:ring-2 focus:ring-primary transition-shadow" type="date" value="2023-09-04"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="text-label-md text-on-surface-variant uppercase tracking-wider">Fin des cours prévue</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-on-surface-variant">event</span>
+<input class="bg-surface-container w-full rounded-lg pl-10 pr-md py-sm text-body-lg text-on-surface outline-none focus:ring-2 focus:ring-primary transition-shadow" type="date" value="2024-06-28"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Paramètres académiques -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-xl scroll-mt-32" id="academique">
+<div class="flex items-center justify-between mb-lg">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<h2 class="text-headline-md text-on-surface">Structure académique</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div class="flex flex-col gap-md">
+<h3 class="text-title-lg text-on-surface flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">pie_chart</span>
+              Découpage de l'année
+            </h3>
+<div class="flex flex-col gap-xs">
+<label class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container cursor-pointer transition-colors group">
+<div class="flex items-center gap-sm">
+<div class="w-4 h-4 rounded-full bg-primary shadow-[inset_0_0_0_4px_white,0_0_0_1px_#000666]"></div>
+<span class="text-body-lg text-on-surface group-hover:text-primary transition-colors">Trimestres (3 périodes)</span>
+</div>
+</label>
+<label class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container cursor-pointer transition-colors group">
+<div class="flex items-center gap-sm">
+<div class="w-4 h-4 rounded-full bg-transparent shadow-[inset_0_0_0_4px_white,0_0_0_1px_#767683]"></div>
+<span class="text-body-lg text-on-surface-variant group-hover:text-on-surface transition-colors">Semestres (2 périodes)</span>
+</div>
+</label>
+<label class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container cursor-pointer transition-colors group">
+<div class="flex items-center gap-sm">
+<div class="w-4 h-4 rounded-full bg-transparent shadow-[inset_0_0_0_4px_white,0_0_0_1px_#767683]"></div>
+<span class="text-body-lg text-on-surface-variant group-hover:text-on-surface transition-colors">Séquences (6 périodes)</span>
+</div>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-md">
+<h3 class="text-title-lg text-on-surface flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">calculate</span>
+              Système de notation
+            </h3>
+<div class="bg-surface-container rounded-xl p-md">
+<div class="flex flex-col gap-md">
+<div class="flex justify-between items-center">
+<span class="text-body-md text-on-surface-variant">Note maximale par défaut</span>
+<input class="w-16 bg-surface rounded-md px-sm py-xs text-center text-title-md text-on-surface outline-none focus:ring-2 focus:ring-primary" type="number" value="20"/>
+</div>
+<div class="w-full h-[1px] bg-outline-variant/30"></div>
+<div class="flex justify-between items-center">
+<span class="text-body-md text-on-surface-variant">Moyenne de passage</span>
+<input class="w-16 bg-surface rounded-md px-sm py-xs text-center text-title-md text-on-surface outline-none focus:ring-2 focus:ring-primary" type="number" value="10"/>
+</div>
+<div class="w-full h-[1px] bg-outline-variant/30"></div>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Calcul automatique du rang</span>
+<div class="relative w-10 h-6 bg-primary rounded-full shadow-inner transition-colors">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm transition-transform"></div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Notifications -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-xl scroll-mt-32" id="notifications">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-12 h-12 rounded-full bg-[#FFF3E0] flex items-center justify-center text-[#E65100]">
+<span class="material-symbols-outlined text-[24px]">notifications_active</span>
+</div>
+<h2 class="text-headline-md text-on-surface">Préférences de notification</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-xl gap-y-md">
+<div class="flex items-center justify-between p-md rounded-xl hover:bg-surface-container transition-colors">
+<div>
+<p class="text-title-md text-on-surface">Absences élèves</p>
+<p class="text-caption text-on-surface-variant">Notifier les parents immédiatement par SMS</p>
+</div>
+<div class="relative w-10 h-6 bg-primary rounded-full shadow-inner cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-md rounded-xl hover:bg-surface-container transition-colors">
+<div>
+<p class="text-title-md text-on-surface">Publication des notes</p>
+<p class="text-caption text-on-surface-variant">Email hebdomadaire aux parents</p>
+</div>
+<div class="relative w-10 h-6 bg-surface-variant rounded-full shadow-inner cursor-pointer">
+<div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-md rounded-xl hover:bg-surface-container transition-colors">
+<div>
+<p class="text-title-md text-on-surface">Rappels de paiement</p>
+<p class="text-caption text-on-surface-variant">7 jours avant l'échéance de la tranche</p>
+</div>
+<div class="relative w-10 h-6 bg-primary rounded-full shadow-inner cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-md rounded-xl hover:bg-surface-container transition-colors">
+<div>
+<p class="text-title-md text-on-surface">Modifications d'emploi du temps</p>
+<p class="text-caption text-on-surface-variant">Alerte in-app pour les enseignants concernés</p>
+</div>
+<div class="relative w-10 h-6 bg-primary rounded-full shadow-inner cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Sécurité -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-xl scroll-mt-32" id="securite">
+<div class="flex items-center gap-md mb-lg">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">shield_lock</span>
+</div>
+<h2 class="text-headline-md text-on-surface">Sécurité & Accès</h2>
+</div>
+<div class="flex flex-col gap-lg">
+<div class="bg-surface-container rounded-xl p-lg flex flex-col sm:flex-row items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">password</span>
+</div>
+<div>
+<p class="text-title-md text-on-surface">Mot de passe administrateur</p>
+<p class="text-body-sm text-on-surface-variant">Dernière modification il y a 3 mois</p>
+</div>
+</div>
+<button class="px-md py-sm rounded-lg bg-surface text-primary border border-outline-variant font-title-md hover:bg-surface-variant transition-colors w-full sm:w-auto">
+              Changer le mot de passe
+            </button>
+</div>
+<div>
+<h3 class="text-title-md text-on-surface mb-md">Sessions actives</h3>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between p-md bg-surface-container-low rounded-lg border border-primary/20">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-[28px]">desktop_windows</span>
+<div>
+<p class="text-body-md font-medium text-on-surface">Chrome sur Mac OS X <span class="ml-2 text-[10px] uppercase tracking-widest bg-primary/10 text-primary px-2 py-1 rounded-full font-bold">Actuel</span></p>
+<p class="text-caption text-on-surface-variant">Yaoundé, Cameroun • IP: 192.168.1.45</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-md bg-surface-container-low rounded-lg group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant text-[28px]">smartphone</span>
+<div>
+<p class="text-body-md text-on-surface">Safari sur iPhone 13</p>
+<p class="text-caption text-on-surface-variant">Douala, Cameroun • Actif hier</p>
+</div>
+</div>
+<button class="text-error hover:bg-error/10 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+</button>
+</div>
+</div>
+<button class="mt-md text-secondary font-title-md hover:underline flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+              Déconnecter toutes les autres sessions
+            </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></main></div></body></html>

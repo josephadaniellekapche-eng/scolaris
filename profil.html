@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCOLARIS — Mon compte</title>
+  <link rel="stylesheet" href="tableau-de-bord.css">
+  <link rel="stylesheet" href="profil.css">
+</head>
+<body>
+
+<div class="application">
+
+  <!-- ================= BARRE LATÉRALE ================= -->
+  <aside class="rail" id="rail">
+
+    <div class="rail-marque">
+      <img src="logo.png.jpeg" alt="Logo du SCOLARIS">
+      <div>
+        <b>SCOLARIS</b>
+        <span>Gestion scolaire</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+
+      <a class="menu-lien" href="tableau-de-bord.html">
+        <span class="ico" style="--c:#60A5FA;--bg:rgba(96,165,250,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1v-9"/></svg></span>
+        <span class="texte">Tableau de bord</span>
+      </a>
+
+      <a class="menu-lien" href="inscription.html">
+        <span class="ico" style="--c:#22D3EE;--bg:rgba(34,211,238,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></span>
+        <span class="texte">Inscription</span>
+      </a>
+
+      <a class="menu-lien" href="eleves.html">
+        <span class="ico" style="--c:#A78BFA;--bg:rgba(167,139,250,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg></span>
+        <span class="texte">Élèves</span>
+      </a>
+
+      <a class="menu-lien" href="classes.html">
+        <span class="ico" style="--c:#38BDF8;--bg:rgba(56,189,248,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><path d="M3 21h18"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg></span>
+        <span class="texte">Classes</span>
+      </a>
+
+      <a class="menu-lien" href="matieres.html">
+        <span class="ico" style="--c:#F472B6;--bg:rgba(244,114,182,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5c-1.5-1-4-1.5-6-1.5-1 0-2 .1-3 .4v13c1-.3 2-.4 3-.4 2 0 4.5.5 6 1.5V6.5Z"/><path d="M12 6.5c1.5-1 4-1.5 6-1.5 1 0 2 .1 3 .4v13c-1-.3-2-.4-3-.4-2 0-4.5.5-6 1.5V6.5Z"/></svg></span>
+        <span class="texte">Matières</span>
+      </a>
+
+      <a class="menu-lien" href="enseignants.html">
+        <span class="ico" style="--c:#2DD4BF;--bg:rgba(45,212,191,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-1.5C5 16.5 8 15 12 15s7 1.5 7 4.5V21"/></svg></span>
+        <span class="texte">Enseignants</span>
+      </a>
+
+      <a class="menu-lien" href="emploi-du-temps.html">
+        <span class="ico" style="--c:#FBBF24;--bg:rgba(251,191,36,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18"/><path d="M8 3v3M16 3v3"/></svg></span>
+        <span class="texte">Emploi du temps</span>
+      </a>
+
+      <a class="menu-lien" href="Notes.html">
+        <span class="ico" style="--c:#FACC15;--bg:rgba(250,204,21,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+        <span class="texte">Notes</span>
+      </a>
+
+
+      <a class="menu-lien" href="resultats.html">
+        <span class="ico" style="--c:#FB7185;--bg:rgba(251,113,133,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="4" height="8"/><rect x="10" y="6" width="4" height="14"/><rect x="16" y="9" width="4" height="11"/></svg></span>
+        <span class="texte">Résultats de classe</span>
+      </a>
+
+      <a class="menu-lien" href="bulletins.html">
+        <span class="ico" style="--c:#FB7185;--bg:rgba(251,113,133,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="4" height="8"/><rect x="10" y="6" width="4" height="14"/><rect x="16" y="9" width="4" height="11"/></svg></span>
+        <span class="texte">Bulletins</span>
+      </a>
+
+</nav>
+
+    <div class="rail-pied">
+      <div class="compte">
+        <span class="avatar">JK</span>
+        <div>
+          <b>Josepha Kapche</b>
+        </div>
+      </div>
+      <a class="deconnexion" href="connexion.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+        </svg>
+        Se déconnecter
+      </a>
+    </div>
+
+  </aside>
+
+  <div class="voile" id="voile"></div>
+
+  <!-- ================= ZONE PRINCIPALE ================= -->
+  <div class="zone">
+
+    <header class="barre">
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div class="fil">
+        <span id="filSection">Mon compte</span>
+        <b>Année scolaire 2026 – 2027</b>
+      </div>
+      <div class="barre-actions" style="margin-left:auto">
+        <button class="cloche" id="cloche" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/>
+          </svg>
+          <span class="badge-cloche" id="badgeCloche">0</span>
+        </button>
+        <button class="avatar" id="boutonCompteBarre" type="button" aria-label="Menu du compte">JK</button>
+      </div>
+    </header>
+
+    <!-- Contenu -->
+    <main class="contenu contenu-profil">
+
+      <a class="retour" href="tableau-de-bord.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        Retour au tableau de bord
+      </a>
+
+      <div class="entete">
+        <div>
+          <h1>Mon compte</h1>
+          <p>Gérez vos informations personnelles, vos préférences et la sécurité de votre compte.</p>
+        </div>
+      </div>
+
+      <div class="mise-en-page-profil">
+
+        <!-- ======= Sommaire ======= -->
+        <nav class="sommaire-profil" aria-label="Sections du compte">
+          <p class="popover-titre">Informations</p>
+          <a href="#profil">Profil</a>
+          <a href="#etablissement">Établissement</a>
+          <a href="#annee">Année scolaire</a>
+          <p class="popover-titre">Préférences</p>
+          <a href="#parametres-compte">Paramètres du compte</a>
+          <a href="#preferences">Préférences</a>
+          <a href="#notifications">Notifications</a>
+          <p class="popover-titre">Sécurité</p>
+          <a href="#mot-de-passe">Changer le mot de passe</a>
+          <a href="#sessions">Sessions actives</a>
+        </nav>
+
+        <div class="colonne-profil">
+
+          <!-- ======= PROFIL ======= -->
+          <section class="bloc" id="profil">
+            <div class="bloc-entete"><h2>Profil</h2></div>
+            <div class="carte carte-profil">
+              <div class="profil-identite">
+                <span class="avatar avatar-grand" id="avatarGrand">JK</span>
+                <div>
+                  <b id="profilNomComplet">Josepha Kapche</b>
+                  <span id="profilRole">Administrateur</span>
+                </div>
+              </div>
+              <div class="grille-champs" id="profilLecture">
+                <div class="champ-lecture">
+                  <span class="etiquette">Prénom</span>
+                  <p id="profilPrenom">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Nom</span>
+                  <p id="profilNom">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Adresse e-mail</span>
+                  <p id="profilEmail">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Rôle</span>
+                  <p id="profilRoleChamp">—</p>
+                </div>
+              </div>
+              <form class="grille-champs" id="profilEdition" hidden>
+                <div class="champ">
+                  <label for="editPrenom">Prénom</label>
+                  <input type="text" id="editPrenom" required>
+                </div>
+                <div class="champ">
+                  <label for="editNom">Nom</label>
+                  <input type="text" id="editNom" required>
+                </div>
+                <div class="champ" style="grid-column:1/-1">
+                  <label for="editEmail">Adresse e-mail</label>
+                  <input type="email" id="editEmail" required>
+                </div>
+              </form>
+              <div class="actions-profil">
+                <button class="btn plein" id="btnModifierProfil" type="button">Modifier mes informations</button>
+                <button class="btn plein" id="btnEnregistrerProfil" type="button" hidden>Enregistrer</button>
+                <button class="btn" id="btnAnnulerProfil" type="button" hidden>Annuler</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ======= ÉTABLISSEMENT ======= -->
+          <section class="bloc" id="etablissement">
+            <div class="bloc-entete"><h2>Établissement</h2></div>
+            <div class="carte carte-pad">
+              <div class="grille-champs grille-champs-pad" id="etablissementLecture">
+                <div class="champ-lecture">
+                  <span class="etiquette">Nom de l'établissement</span>
+                  <p id="etabNom">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Adresse</span>
+                  <p id="etabAdresse">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Téléphone</span>
+                  <p id="etabTelephone">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">E-mail</span>
+                  <p id="etabEmail">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Délégation régionale (FR)</span>
+                  <p id="etabDelegationRegionale">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Regional Delegation (EN)</span>
+                  <p id="etabDelegationRegionaleEn">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Délégation départementale (FR)</span>
+                  <p id="etabDelegationDepartementale">—</p>
+                </div>
+                <div class="champ-lecture">
+                  <span class="etiquette">Divisional Delegation (EN)</span>
+                  <p id="etabDelegationDepartementaleEn">—</p>
+                </div>
+              </div>
+              <form class="grille-champs" id="etablissementEdition" hidden>
+                <div class="champ">
+                  <label for="editEtabNom">Nom de l'établissement</label>
+                  <input type="text" id="editEtabNom" required>
+                </div>
+                <div class="champ">
+                  <label for="editEtabAdresse">Adresse</label>
+                  <input type="text" id="editEtabAdresse" required>
+                </div>
+                <div class="champ">
+                  <label for="editEtabTelephone">Téléphone</label>
+                  <input type="text" id="editEtabTelephone" required>
+                </div>
+                <div class="champ">
+                  <label for="editEtabEmail">E-mail</label>
+                  <input type="email" id="editEtabEmail" required>
+                </div>
+                <div class="champ">
+                  <label for="editEtabDelegationRegionale">Délégation régionale (FR) — en-tête du bulletin</label>
+                  <input type="text" id="editEtabDelegationRegionale" placeholder="Ex. Délégation Régionale du Centre">
+                </div>
+                <div class="champ">
+                  <label for="editEtabDelegationRegionaleEn">Regional Delegation (EN)</label>
+                  <input type="text" id="editEtabDelegationRegionaleEn" placeholder="Ex. Centre Regional Delegation">
+                </div>
+                <div class="champ">
+                  <label for="editEtabDelegationDepartementale">Délégation départementale (FR)</label>
+                  <input type="text" id="editEtabDelegationDepartementale" placeholder="Ex. Délégation Départementale du Mfoundi">
+                </div>
+                <div class="champ">
+                  <label for="editEtabDelegationDepartementaleEn">Divisional Delegation (EN)</label>
+                  <input type="text" id="editEtabDelegationDepartementaleEn" placeholder="Ex. Mfoundi Divisional Delegation">
+                </div>
+              </form>
+              <div class="actions-profil" id="etablissementActions" hidden>
+                <button class="btn plein" id="btnModifierEtab" type="button">Modifier</button>
+                <button class="btn plein" id="btnEnregistrerEtab" type="button" hidden>Enregistrer</button>
+                <button class="btn" id="btnAnnulerEtab" type="button" hidden>Annuler</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ======= ANNÉE SCOLAIRE ======= -->
+          <section class="bloc" id="annee">
+            <div class="bloc-entete"><h2>Année scolaire</h2></div>
+            <div class="carte carte-pad">
+              <div class="champ">
+                <label for="selectAnnee">Année scolaire active</label>
+                <select id="selectAnnee"></select>
+              </div>
+              <p class="astuce" id="anneeAstuce">Le changement d'année scolaire active reste réservé à la direction.</p>
+              <div class="actions-profil" id="anneeActions" hidden>
+                <button class="btn plein" id="btnEnregistrerAnnee" type="button">Enregistrer</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ======= PARAMÈTRES DU COMPTE ======= -->
+          <section class="bloc" id="parametres-compte">
+            <div class="bloc-entete"><h2>Paramètres du compte</h2></div>
+            <div class="carte carte-pad">
+              <div class="champ">
+                <label for="champLangue">Langue de l'interface</label>
+                <select id="champLangue">
+                  <option value="fr" selected>Français</option>
+                  <option value="en">English</option>
+                </select>
+              </div>
+              <div class="champ">
+                <label for="champFuseau">Fuseau horaire</label>
+                <select id="champFuseau">
+                  <option value="Africa/Douala" selected>Afrique/Yaoundé (GMT+1)</option>
+                </select>
+              </div>
+              <div class="actions-profil">
+                <button class="btn plein" id="btnEnregistrerParametres" type="button">Enregistrer</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ======= PRÉFÉRENCES ======= -->
+          <section class="bloc" id="preferences">
+            <div class="bloc-entete"><h2>Préférences</h2></div>
+            <div class="carte">
+              <ul class="liste-parametres" id="listePreferences">
+                <li>
+                  <div><b>Mode compact</b><small>Réduire l'espacement des tableaux et des cartes.</small></div>
+                  <label class="interrupteur"><input type="checkbox" data-pref="mode-compact"><span></span></label>
+                </li>
+                <li>
+                  <div><b>Ouverture automatique du menu</b><small>Garder les sous-menus déroulés ouverts.</small></div>
+                  <label class="interrupteur"><input type="checkbox" data-pref="menu-ouvert"><span></span></label>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ======= NOTIFICATIONS (paramètres) ======= -->
+          <section class="bloc" id="notifications">
+            <div class="bloc-entete"><h2>Notifications</h2></div>
+            <div class="carte">
+              <ul class="liste-parametres" id="listeNotifPrefs">
+                <li>
+                  <div><b>Nouveaux dossiers d'inscription</b><small>Recevoir une alerte à chaque dépôt de dossier.</small></div>
+                  <label class="interrupteur"><input type="checkbox" data-pref="notif-inscriptions" checked><span></span></label>
+                </li>
+                <li>
+                  <div><b>Scolarités impayées</b><small>Être averti des échéances de paiement dépassées.</small></div>
+                  <label class="interrupteur"><input type="checkbox" data-pref="notif-scolarite" checked><span></span></label>
+                </li>
+                <li>
+                  <div><b>Absences signalées</b><small>Recevoir un résumé quotidien des absences.</small></div>
+                  <label class="interrupteur"><input type="checkbox" data-pref="notif-absences"><span></span></label>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ======= MOT DE PASSE ======= -->
+          <section class="bloc" id="mot-de-passe">
+            <div class="bloc-entete"><h2>Changer le mot de passe</h2></div>
+            <div class="carte carte-pad">
+              <form id="formMotDePasse" novalidate>
+                <div class="champ">
+                  <label for="mdpActuel">Mot de passe actuel</label>
+                  <input type="password" id="mdpActuel" autocomplete="current-password" required>
+                </div>
+                <div class="champ">
+                  <label for="mdpNouveau">Nouveau mot de passe</label>
+                  <input type="password" id="mdpNouveau" autocomplete="new-password" minlength="6" required>
+                </div>
+                <div class="champ">
+                  <label for="mdpConfirmation">Confirmer le nouveau mot de passe</label>
+                  <input type="password" id="mdpConfirmation" autocomplete="new-password" minlength="6" required>
+                </div>
+                <p class="erreur-mdp" id="erreurMdp"></p>
+                <button class="btn plein" type="submit">Mettre à jour le mot de passe</button>
+              </form>
+            </div>
+          </section>
+
+          <!-- ======= SESSIONS ACTIVES ======= -->
+          <section class="bloc" id="sessions">
+            <div class="bloc-entete"><h2>Sessions actives</h2></div>
+            <div class="carte">
+              <ul class="liste-sessions" id="listeConnexions">
+                <li><div><p>Chargement…</p></div></li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="compte.js"></script>
+<script src="profil.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCOLARIS — Reçu</title>
+  <link rel="stylesheet" href="tableau-de-bord.css">
+  <link rel="stylesheet" href="eleves.css">
+  <link rel="stylesheet" href="bulletins.css">
+  <link rel="stylesheet" href="finance.css">
+</head>
+<body>
+
+<div class="application">
+
+  <!-- ================= BARRE LATÉRALE ================= -->
+  <aside class="rail" id="rail">
+
+    <div class="rail-marque">
+      <img src="logo.png.jpeg" alt="Logo du SCOLARIS">
+      <div>
+        <b>SCOLARIS</b>
+        <span>Gestion scolaire</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+
+      <a class="menu-lien" href="tableau-de-bord.html">
+        <span class="ico" style="--c:#60A5FA;--bg:rgba(96,165,250,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1v-9"/></svg></span><span class="texte">Tableau de bord</span>
+      </a>
+
+      <a class="menu-lien" href="eleves.html">
+        <span class="ico" style="--c:#A78BFA;--bg:rgba(167,139,250,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg></span><span class="texte">Élèves</span>
+      </a>
+
+      
+      
+      <a class="menu-lien actif" href="paiements.html">
+        <span class="ico" style="--c:#4ADE80;--bg:rgba(74,222,128,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-3"/><path d="M16 12.5h.01"/><path d="M3 9V6a2 2 0 0 1 2-2h11"/></svg></span><span class="texte">Paiements</span>
+      </a>
+    </nav>
+
+    <div class="rail-pied">
+      <div class="compte">
+        <span class="avatar">JK</span>
+        <div><b>Josepha Kapche</b></div>
+      </div>
+      <a class="deconnexion" href="connexion.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+        </svg>
+        Se déconnecter
+      </a>
+    </div>
+
+  </aside>
+
+  <div class="voile" id="voile"></div>
+
+  <!-- ================= ZONE PRINCIPALE ================= -->
+  <div class="zone">
+
+    <header class="barre">
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div class="fil">
+        <span id="filSection">Reçu</span>
+        <b>Année scolaire 2026 – 2027</b>
+      </div>
+      <div class="barre-actions" style="margin-left:auto">
+        <button class="cloche" id="cloche" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/>
+          </svg>
+          <span class="badge-cloche" id="badgeCloche">0</span>
+        </button>
+        <button class="avatar" id="boutonCompteBarre" type="button" aria-label="Menu du compte">JK</button>
+      </div>
+    </header>
+
+    <main class="contenu contenu-profil">
+
+      <div class="entete">
+        <div>
+          <h1>Reçu de paiement</h1>
+          <p>Reconstitué automatiquement à partir du paiement enregistré .</p>
+        </div>
+        <div class="entete-actions">
+          <button class="btn plein" id="btnImprimer">Imprimer le reçu</button>
+        </div>
+      </div>
+
+      <div id="zoneRecu" hidden>
+
+        <div class="bulletin-letterhead">
+          <img src="logo.png.jpeg" alt="Logo du SCOLARIS">
+          <div>
+            <b>SCOLARIS</b>
+            <span>Reçu de paiement / Année scolaire <span id="recuAnnee">:</span></span>
+          </div>
+        </div>
+
+        <div class="carte carte-recu">
+          <div class="recu-numero">
+            <span>Reçu N°</span>
+            <b id="recuNumero">:</b>
+          </div>
+
+          <dl class="donnees recu-donnees">
+            <div><dt>Élève</dt><dd id="recuEleve">:</dd></div>
+            <div><dt>Matricule</dt><dd id="recuMatricule">:</dd></div>
+            <div><dt>Classe</dt><dd id="recuClasse">:</dd></div>
+            <div><dt>Frais concerné</dt><dd id="recuFrais">:</dd></div>
+            <div><dt>Date du paiement</dt><dd id="recuDate">:</dd></div>
+            <div><dt>Mode de paiement</dt><dd id="recuMode">:</dd></div>
+            <div><dt>Référence</dt><dd id="recuReference">:</dd></div>
+            <div><dt>Observation</dt><dd id="recuObservation">:</dd></div>
+          </dl>
+
+          <div class="recu-montant">
+            <span>Montant reçu</span>
+            <b id="recuMontant">:</b>
+          </div>
+
+          <div class="recu-pied">
+            <div>
+              <span>Solde restant après ce paiement</span>
+              <b id="recuSolde">:</b>
+            </div>
+            <div>
+              <span>Enregistré par</span>
+              <b id="recuSaisiPar">:</b>
+            </div>
+            <div>
+              <span>Code de vérification</span>
+              <b id="recuCodeVerification">:</b>
+            </div>
+          </div>
+
+          <p class="recu-signature">Signature et cachet de l'établissement</p>
+        </div>
+
+      </div>
+
+      <p class="vide visible" id="messageVide">Reçu introuvable.</p>
+
+      <p class="pied">© 2026 SCOLARIS – Gestion Scolaire</p>
+
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  <span id="toastTexte"></span>
+</div>
+
+<script src="compte.js"></script>
+<script src="recu.js"></script>
+</body>
+</html>

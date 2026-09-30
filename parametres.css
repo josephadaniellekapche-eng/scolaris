@@ -1,0 +1,8 @@
+/* =========================================================
+   SCOLARIS — Module Paramètres
+   Complète tableau-de-bord.css / eleves.css / finance.css / profil.css
+   ========================================================= */
+
+.bloc-entete{ display: flex; align-items: center; gap: 12px; }
+
+#annees .carte-formulaire{ margin-bottom: 14px; }

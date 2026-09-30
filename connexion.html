@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCOLARIS — Connexion</title>
+  <link rel="stylesheet" href="connexion.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- ============ PANNEAU GAUCHE : MARQUE ============ -->
+    <section class="marque">
+      <div class="marque-contenu">
+
+        <div class="logo-cadre">
+          <img src="logo.png.jpeg" alt="Logo du SCOLARIS">
+        </div>
+
+        <h1 class="nom">SCOLARIS</h1>
+        <p class="sous-titre">Système de gestion scolaire</p>
+
+        <!-- Emplacement libre : illustration, photo de l'établissement ou devise -->
+        <div class="illustration">
+          <p class="devise">Discipline · Travail · Succès</p>
+        </div>
+
+        <p class="slogan">Gérez efficacement votre établissement scolaire.</p>
+
+      </div>
+    </section>
+
+    <!-- ============ PANNEAU DROIT : FORMULAIRE ============ -->
+    <section class="acces">
+
+      <form class="carte" id="formConnexion" novalidate>
+
+        <h2 class="titre">Bienvenue&nbsp;!</h2>
+        <p class="intro">Connectez-vous à votre espace administrateur</p>
+
+        <!-- Adresse e-mail -->
+        <div class="champ">
+          <label for="email">Adresse e-mail</label>
+          <div class="boite" id="boiteEmail">
+            <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m2 7 10 6 10-6"/>
+            </svg>
+            <input type="email" id="email" name="email"
+                   placeholder="nom@lyceeclassic.edu" autocomplete="username">
+          </div>
+          <p class="erreur" id="erreurEmail">Renseignez votre adresse e-mail.</p>
+        </div>
+
+        <!-- Mot de passe -->
+        <div class="champ">
+          <label for="motdepasse">Mot de passe</label>
+          <div class="boite" id="boiteMdp">
+            <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="10" width="16" height="11" rx="2"/>
+              <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+            </svg>
+            <input type="password" id="motdepasse" name="motdepasse"
+                   placeholder="••••••••" autocomplete="current-password">
+            <button type="button" class="oeil" id="basculeMdp" aria-label="Afficher le mot de passe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <p class="erreur" id="erreurMdp">Saisissez votre mot de passe.</p>
+        </div>
+
+        <!-- Options -->
+        <div class="options">
+          <label class="souvenir">
+            <input type="checkbox" id="souvenir">
+            <span class="case">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+            </span>
+            Se souvenir de moi
+          </label>
+          <a href="#" class="oubli" id="lienOubli">Mot de passe oublié&nbsp;?</a>
+        </div>
+
+        <!-- Validation -->
+        <button type="submit" class="bouton" id="boutonConnexion">
+          <span id="texteBouton">Se connecter</span>
+          <svg class="fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </button>
+
+        <p class="message" id="message"></p>
+
+        <p class="mention">Accès réservé au personnel autorisé.</p>
+
+      </form>
+
+      <p class="pied">© 2026 SCOLARIS – Gestion Scolaire</p>
+
+    </section>
+
+  </div>
+
+  <script src="connexion.js"></script>
+</body>
+</html>

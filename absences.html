@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCOLARIS — Absences &amp; Retards</title>
+  <link rel="stylesheet" href="tableau-de-bord.css">
+  <link rel="stylesheet" href="eleves.css">
+  <link rel="stylesheet" href="finance.css">
+  <link rel="stylesheet" href="absences.css">
+</head>
+<body>
+
+<div class="application">
+
+  <!-- ================= BARRE LATÉRALE ================= -->
+  <aside class="rail" id="rail">
+
+    <div class="rail-marque">
+      <img src="logo.png.jpeg" alt="Logo du SCOLARIS">
+      <div>
+        <b>SCOLARIS</b>
+        <span>Gestion scolaire</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+
+      <a class="menu-lien" href="tableau-de-bord.html">
+        <span class="ico" style="--c:#60A5FA;--bg:rgba(96,165,250,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1v-9"/></svg></span>
+        <span class="texte">Tableau de bord</span>
+      </a>
+
+      <a class="menu-lien" href="inscription.html">
+        <span class="ico" style="--c:#22D3EE;--bg:rgba(34,211,238,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></span>
+        <span class="texte">Inscription</span>
+      </a>
+
+      <a class="menu-lien" href="eleves.html">
+        <span class="ico" style="--c:#A78BFA;--bg:rgba(167,139,250,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg></span>
+        <span class="texte">Élèves</span>
+      </a>
+
+      <a class="menu-lien" href="classes.html">
+        <span class="ico" style="--c:#38BDF8;--bg:rgba(56,189,248,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><path d="M3 21h18"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg></span>
+        <span class="texte">Classes</span>
+      </a>
+
+      <a class="menu-lien" href="matieres.html">
+        <span class="ico" style="--c:#F472B6;--bg:rgba(244,114,182,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5c-1.5-1-4-1.5-6-1.5-1 0-2 .1-3 .4v13c1-.3 2-.4 3-.4 2 0 4.5.5 6 1.5V6.5Z"/><path d="M12 6.5c1.5-1 4-1.5 6-1.5 1 0 2 .1 3 .4v13c-1-.3-2-.4-3-.4-2 0-4.5.5-6 1.5V6.5Z"/></svg></span>
+        <span class="texte">Matières</span>
+      </a>
+
+      <a class="menu-lien" href="enseignants.html">
+        <span class="ico" style="--c:#2DD4BF;--bg:rgba(45,212,191,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-1.5C5 16.5 8 15 12 15s7 1.5 7 4.5V21"/></svg></span>
+        <span class="texte">Enseignants</span>
+      </a>
+
+      <a class="menu-lien" href="emploi-du-temps.html">
+        <span class="ico" style="--c:#FBBF24;--bg:rgba(251,191,36,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18"/><path d="M8 3v3M16 3v3"/></svg></span>
+        <span class="texte">Emploi du temps</span>
+      </a>
+
+      <a class="menu-lien" href="Notes.html">
+        <span class="ico" style="--c:#FACC15;--bg:rgba(250,204,21,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+        <span class="texte">Notes</span>
+      </a>
+
+      <div class="groupe ouvert" id="groupeVie">
+        <button class="menu-lien deroulant" data-groupe="groupeVie">
+          <span class="ico" style="--c:#34D399;--bg:rgba(52,211,153,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="m7.5 12 3 3 6-6"/></svg></span>
+          <span class="texte">Vie scolaire</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="sous-menu">
+          <a class="sous-lien actif" href="absences.html">Absences &amp; Retards</a>
+        </div>
+      </div>
+
+      <div class="groupe" id="groupeFinances">
+        <button class="menu-lien deroulant" data-groupe="groupeFinances">
+          <span class="ico" style="--c:#4ADE80;--bg:rgba(74,222,128,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-3"/><path d="M16 12.5h.01"/><path d="M3 9V6a2 2 0 0 1 2-2h11"/></svg></span>
+          <span class="texte">Finances</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="sous-menu">
+          <a class="sous-lien" href="paiements.html">Paiements</a>
+          <a class="sous-lien" href="livret-caisse.html">Livret de caisse</a>
+          <a class="sous-lien" href="impayes.html">Impayés</a>
+          <a class="sous-lien" href="depenses.html">Dépenses</a>
+          <a class="sous-lien" href="rapports-financiers.html">Rapports financiers</a>
+        </div>
+      </div>
+
+      <div class="groupe" id="groupeResultats">
+        <button class="menu-lien deroulant" data-groupe="groupeResultats">
+          <span class="ico" style="--c:#FB7185;--bg:rgba(251,113,133,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="4" height="8"/><rect x="10" y="6" width="4" height="14"/><rect x="16" y="9" width="4" height="11"/></svg></span><span class="texte">Résultats &amp; Bulletins</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="sous-menu">
+          <a class="sous-lien" href="resultats.html">Résultats de classe</a>
+          <a class="sous-lien" href="bulletins.html">Bulletins</a>
+        </div>
+      </div>
+
+      <div class="groupe" id="groupeAdministratif">
+        <button class="menu-lien deroulant" data-groupe="groupeAdministratif">
+          <span class="ico" style="--c:#FB923C;--bg:rgba(251,146,60,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6Z"/></svg></span>
+          <span class="texte">Administratif</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="sous-menu">
+          <a class="sous-lien" href="administratif.html">Tableau de bord</a>
+          <a class="sous-lien" href="utilisateurs.html">Utilisateurs &amp; rôles</a>
+          <a class="sous-lien" href="personnel.html">Personnel administratif</a>
+          <a class="sous-lien" href="communication.html">Communication</a>
+        </div>
+      </div>
+
+      <a class="menu-lien" href="parametres.html">
+        <span class="ico" style="--c:#94A3B8;--bg:rgba(148,163,184,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V19a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 17.6a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 13a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 6.6a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 2.28V2a2 2 0 0 1 4 0v.09c0 .67.39 1.27 1 1.51.61.24 1.31.13 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06c-.46.51-.57 1.21-.33 1.82.24.61.84 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.67 0-1.27.39-1.51 1Z"/></svg></span>
+        <span class="texte">Paramètres</span>
+      </a>
+
+</nav>
+
+    <div class="rail-pied">
+      <div class="compte">
+        <span class="avatar">JK</span>
+        <div>
+          <b>Josepha Kapche</b>
+        </div>
+      </div>
+      <a class="deconnexion" href="connexion.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+        </svg>
+        Se déconnecter
+      </a>
+    </div>
+
+  </aside>
+
+  <div class="voile" id="voile"></div>
+
+  <!-- ================= ZONE PRINCIPALE ================= -->
+  <div class="zone">
+
+    <header class="barre">
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div class="fil">
+        <span id="filSection">Absences &amp; Retards</span>
+        <b>Année scolaire 2026 – 2027</b>
+      </div>
+      <div class="barre-actions" style="margin-left:auto">
+        <button class="cloche" id="cloche" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/>
+          </svg>
+          <span class="badge-cloche" id="badgeCloche">0</span>
+        </button>
+        <button class="avatar" id="boutonCompteBarre" type="button" aria-label="Menu du compte">JK</button>
+      </div>
+    </header>
+
+    <main class="contenu">
+
+      <div class="entete">
+        <div>
+          <h1>Absences &amp; Retards</h1>
+          <p>Enregistrez et suivez l'assiduité des élèves et des enseignants, puis traitez leurs justificatifs.</p>
+        </div>
+      </div>
+
+      <div class="onglets" role="tablist">
+        <button class="onglet actif" data-volet="voletEleves">Élèves</button>
+        <button class="onglet" data-volet="voletEnseignants">Enseignants</button>
+      </div>
+
+      <!-- ================= VOLET ÉLÈVES ================= -->
+      <div id="voletEleves">
+
+        <div class="entete-actions volet-actions">
+          <button class="btn" id="btnJustifier">Justifier</button>
+          <button class="btn plein" id="btnNouvelleAbsence">+ Enregistrer</button>
+        </div>
+
+        <div class="indicateurs">
+          <article class="carte indic">
+            <span class="etiquette">Aujourd'hui</span>
+            <strong class="valeur" id="kpiJour">—</strong>
+            <span class="tendance">Absences + retards</span>
+          </article>
+          <article class="carte indic">
+            <span class="etiquette">Justifiées</span>
+            <strong class="valeur" id="kpiJustifiees">—</strong>
+            <span class="tendance">Sur la période filtrée</span>
+          </article>
+          <article class="carte indic">
+            <span class="etiquette">Non justifiées</span>
+            <strong class="valeur ocre" id="kpiNonJustifiees">—</strong>
+            <span class="tendance">Sur la période filtrée</span>
+          </article>
+        </div>
+
+        <!-- Formulaire : enregistrer une absence ou un retard -->
+        <div class="carte carte-formulaire" id="carteNouvelleAbsence" hidden>
+          <div class="grille-champs">
+            <div class="champ" style="grid-column:1/-1">
+              <label for="naEleve">Élève</label>
+              <select id="naEleve"><option value="">Rechercher un élève…</option></select>
+            </div>
+            <div class="champ">
+              <label for="naType">Type</label>
+              <select id="naType">
+                <option value="absence">Absence</option>
+                <option value="retard">Retard</option>
+              </select>
+            </div>
+            <div class="champ">
+              <label for="naDate">Date</label>
+              <input type="date" id="naDate">
+            </div>
+            <div class="champ">
+              <label for="naHeureDebut">Heure de début / d'arrivée</label>
+              <input type="time" id="naHeureDebut">
+            </div>
+            <div class="champ" id="champHeureFin">
+              <label for="naHeureFin">Heure de fin (optionnel)</label>
+              <input type="time" id="naHeureFin">
+            </div>
+            <div class="champ">
+              <label for="naMatiere">Matière concernée (optionnel)</label>
+              <select id="naMatiere"><option value="">Journée entière</option></select>
+            </div>
+            <div class="champ" style="grid-column:1/-1">
+              <label for="naMotif">Motif (optionnel)</label>
+              <input type="text" id="naMotif" maxlength="200" placeholder="Ex. Maladie, problème familial…">
+            </div>
+          </div>
+          <div class="form-finance-actions">
+            <button type="button" class="btn plein" id="btnEnregistrerAbsence">Enregistrer</button>
+            <button type="button" id="btnAnnulerNouvelleAbsence">Annuler</button>
+          </div>
+        </div>
+
+        <!-- Formulaire : justifier une ou plusieurs absences/retards -->
+        <div class="carte carte-formulaire" id="carteJustifier" hidden>
+          <div class="grille-champs">
+            <div class="champ" style="grid-column:1/-1">
+              <label for="jEleve">Élève</label>
+              <select id="jEleve"><option value="">Rechercher un élève…</option></select>
+            </div>
+            <div class="champ" style="grid-column:1/-1">
+              <label>Absences / retards non justifiés</label>
+              <ul class="liste-a-justifier" id="listeAJustifier">
+                <li class="vide-selection">Choisissez d'abord un élève.</li>
+              </ul>
+            </div>
+            <div class="champ">
+              <label for="jTypePiece">Type de pièce (optionnel)</label>
+              <select id="jTypePiece">
+                <option value="">—</option>
+                <option>Certificat médical</option>
+                <option>Mot des parents</option>
+                <option>Convocation</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="champ" style="grid-column:1/-1">
+              <label for="jMotif">Motif</label>
+              <input type="text" id="jMotif" maxlength="200" placeholder="Ex. Certificat médical du 12/09 au 15/09">
+            </div>
+          </div>
+          <div class="form-finance-actions">
+            <button type="button" class="btn plein" id="btnEnregistrerJustification">Justifier la sélection</button>
+            <button type="button" id="btnAnnulerJustifier">Annuler</button>
+          </div>
+        </div>
+
+        <div class="filtres filtres-hauts">
+          <input type="search" id="filtreRecherche" placeholder="Rechercher un élève, un matricule…">
+          <select id="filtreClasse"><option value="">Toutes les classes</option></select>
+          <select id="filtreType">
+            <option value="">Absences et retards</option>
+            <option value="absence">Absences</option>
+            <option value="retard">Retards</option>
+          </select>
+          <select id="filtreJustifie">
+            <option value="">Tous les statuts</option>
+            <option value="1">Justifiées</option>
+            <option value="0">Non justifiées</option>
+          </select>
+          <input type="date" id="filtreDu" title="Du">
+          <input type="date" id="filtreAu" title="Au">
+        </div>
+
+        <div class="carte" id="carteResultats">
+          <div class="table-defile">
+            <table class="tableau">
+              <thead>
+                <tr>
+                  <th>Élève</th><th>Classe</th><th>Type</th><th>Date</th><th>Horaire</th>
+                  <th>Matière</th><th>Motif</th><th>Statut</th><th class="fin">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="corpsAbsences"></tbody>
+            </table>
+          </div>
+          <p class="compte-resultats" id="compteResultats"></p>
+        </div>
+
+      </div>
+
+      <!-- ================= VOLET ENSEIGNANTS ================= -->
+      <div id="voletEnseignants" hidden>
+
+        <div class="entete-actions volet-actions">
+          <button class="btn" id="btnJustifierEns">Justifier</button>
+          <button class="btn plein" id="btnNouvelleAbsenceEns">+ Enregistrer</button>
+        </div>
+
+        <div class="indicateurs">
+          <article class="carte indic">
+            <span class="etiquette">Aujourd'hui</span>
+            <strong class="valeur" id="kpiJourEns">—</strong>
+            <span class="tendance">Absences + retards</span>
+          </article>
+          <article class="carte indic">
+            <span class="etiquette">Justifiées</span>
+            <strong class="valeur" id="kpiJustifieesEns">—</strong>
+            <span class="tendance">Sur la période filtrée</span>
+          </article>
+          <article class="carte indic">
+            <span class="etiquette">Non justifiées</span>
+            <strong class="valeur ocre" id="kpiNonJustifieesEns">—</strong>
+            <span class="tendance">Sur la période filtrée</span>
+          </article>
+        </div>
+
+        <!-- Formulaire : enregistrer une absence ou un retard d'enseignant -->
+        <div class="carte carte-formulaire" id="carteNouvelleAbsenceEns" hidden>
+          <div class="grille-champs">
+            <div class="champ" style="grid-column:1/-1">
+              <label for="naEnsEnseignant">Enseignant</label>
+              <select id="naEnsEnseignant"><option value="">Rechercher un enseignant…</option></select>
+            </div>
+            <div class="champ">
+              <label for="naEnsType">Type</label>
+              <select id="naEnsType">
+                <option value="absence">Absence</option>
+                <option value="retard">Retard</option>
+              </select>
+            </div>
+            <div class="champ">
+              <label for="naEnsDate">Date</label>
+              <input type="date" id="naEnsDate">
+            </div>
+            <div class="champ">
+              <label for="naEnsHeureDebut">Heure de début / d'arrivée</label>
+              <input type="time" id="naEnsHeureDebut">
+            </div>
+            <div class="champ" id="champHeureFinEns">
+              <label for="naEnsHeureFin">Heure de fin (optionnel)</label>
+              <input type="time" id="naEnsHeureFin">
+            </div>
+            <div class="champ">
+              <label for="naEnsClasse">Classe concernée (optionnel)</label>
+              <select id="naEnsClasse"><option value="">—</option></select>
+            </div>
+            <div class="champ">
+              <label for="naEnsMatiere">Matière concernée (optionnel)</label>
+              <select id="naEnsMatiere"><option value="">—</option></select>
+            </div>
+            <div class="champ" style="grid-column:1/-1">
+              <label for="naEnsMotif">Motif (optionnel)</label>
+              <input type="text" id="naEnsMotif" maxlength="200" placeholder="Ex. Maladie, mission, formation…">
+            </div>
+          </div>
+          <div class="form-finance-actions">
+            <button type="button" class="btn plein" id="btnEnregistrerAbsenceEns">Enregistrer</button>
+            <button type="button" id="btnAnnulerNouvelleAbsenceEns">Annuler</button>
+          </div>
+        </div>
+
+        <!-- Formulaire : justifier une ou plusieurs absences/retards d'enseignant -->
+        <div class="carte carte-formulaire" id="carteJustifierEns" hidden>
+          <div class="grille-champs">
+            <div class="champ" style="grid-column:1/-1">
+              <label for="jEnsEnseignant">Enseignant</label>
+              <select id="jEnsEnseignant"><option value="">Rechercher un enseignant…</option></select>
+            </div>
+            <div class="champ" style="grid-column:1/-1">
+              <label>Absences / retards non justifiés</label>
+              <ul class="liste-a-justifier" id="listeAJustifierEns">
+                <li class="vide-selection">Choisissez d'abord un enseignant.</li>
+              </ul>
+            </div>
+            <div class="champ">
+              <label for="jEnsTypePiece">Type de pièce (optionnel)</label>
+              <select id="jEnsTypePiece">
+                <option value="">—</option>
+                <option>Certificat médical</option>
+                <option>Ordre de mission</option>
+                <option>Convocation</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="champ" style="grid-column:1/-1">
+              <label for="jEnsMotif">Motif</label>
+              <input type="text" id="jEnsMotif" maxlength="200" placeholder="Ex. Certificat médical du 12/09 au 15/09">
+            </div>
+          </div>
+          <div class="form-finance-actions">
+            <button type="button" class="btn plein" id="btnEnregistrerJustificationEns">Justifier la sélection</button>
+            <button type="button" id="btnAnnulerJustifierEns">Annuler</button>
+          </div>
+        </div>
+
+        <div class="filtres filtres-hauts">
+          <input type="search" id="filtreRechercheEns" placeholder="Rechercher un enseignant, un matricule…">
+          <select id="filtreTypeEns">
+            <option value="">Absences et retards</option>
+            <option value="absence">Absences</option>
+            <option value="retard">Retards</option>
+          </select>
+          <select id="filtreJustifieEns">
+            <option value="">Tous les statuts</option>
+            <option value="1">Justifiées</option>
+            <option value="0">Non justifiées</option>
+          </select>
+          <input type="date" id="filtreDuEns" title="Du">
+          <input type="date" id="filtreAuEns" title="Au">
+        </div>
+
+        <div class="carte" id="carteResultatsEns">
+          <div class="table-defile">
+            <table class="tableau">
+              <thead>
+                <tr>
+                  <th>Enseignant</th><th>Type</th><th>Date</th><th>Horaire</th>
+                  <th>Classe</th><th>Matière</th><th>Motif</th><th>Statut</th><th class="fin">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="corpsAbsencesEns"></tbody>
+            </table>
+          </div>
+          <p class="compte-resultats" id="compteResultatsEns"></p>
+        </div>
+
+      </div>
+
+      <p class="pied">© 2026 SCOLARIS – Gestion Scolaire</p>
+
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  <span id="toastTexte"></span>
+</div>
+
+<script src="compte.js"></script>
+<script src="absences.js"></script>
+</body>
+</html>

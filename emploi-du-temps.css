@@ -1,0 +1,111 @@
+/* =========================================================
+   SCOLARIS — Module Emploi du temps
+   Complète tableau-de-bord.css / eleves.css / finance.css
+   ========================================================= */
+
+.filtres-hauts{ margin-bottom: 16px; }
+.filtres-hauts select{ min-width: 240px; }
+
+.et-btn-supprimer{ color: var(--rouge); font-weight: 600; }
+
+/* ---------- Grille hebdomadaire ---------- */
+.et-carte-grille{ padding: 0; overflow: hidden; }
+
+.et-grille-defile{ overflow-x: auto; }
+.et-grille{ min-width: 760px; }
+
+.et-entete, .et-corps{
+  display: grid;
+  grid-template-columns: 60px repeat(5, 1fr);
+}
+
+.et-entete{
+  background: #FAFBFE;
+  border-bottom: 1px solid var(--bordure);
+  position: sticky;
+  top: 0;
+}
+
+.et-jour-entete{
+  padding: 13px 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--nuit);
+  border-left: 1px solid var(--bordure);
+}
+
+.et-corps{ position: relative; }
+
+#etAxe{
+  position: relative;
+  border-right: 1px solid var(--bordure);
+}
+.et-heure{
+  position: absolute;
+  left: 0;
+  right: 6px;
+  text-align: right;
+  font-size: 10.5px;
+  color: var(--texte-doux);
+  transform: translateY(-50%);
+}
+
+.et-colonne{
+  position: relative;
+  border-left: 1px solid var(--bordure);
+}
+
+.et-pause{
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: repeating-linear-gradient(45deg, #F4F5F8, #F4F5F8 7px, #EAEBF0 7px, #EAEBF0 14px);
+  border-top: 1px dashed var(--bordure);
+  border-bottom: 1px dashed var(--bordure);
+}
+.et-pause-label{
+  position: absolute;
+  left: 0;
+  right: 4px;
+  text-align: right;
+  font-size: 9.5px;
+  font-style: italic;
+  color: var(--texte-doux);
+  transform: translateY(-50%);
+}
+
+.et-seance{
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  border-radius: 8px;
+  padding: 6px 9px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(30,43,126,.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.et-seance:hover{ transform: translateY(-1px); box-shadow: 0 5px 14px -4px rgba(30,43,126,.35); z-index: 5; }
+.et-seance b{ display: block; font-size: 12.5px; font-weight: 700; line-height: 1.25; }
+.et-seance small{ display: block; font-size: 10.5px; opacity: .85; line-height: 1.3; margin-top: 2px; }
+
+.et-c0{ background: var(--royal-pale); color: var(--nuit); }
+.et-c1{ background: var(--vert-pale); color: var(--vert); }
+.et-c2{ background: var(--ocre-pale); color: var(--ocre); }
+.et-c3{ background: var(--rouge-pale); color: var(--rouge); }
+.et-c4{ background: #EDE7F6; color: #5E35B1; }
+.et-c5{ background: #E0F7FA; color: #00838F; }
+
+@media (max-width: 860px){
+  .filtres-hauts{ flex-direction: column; align-items: stretch; }
+  .filtres-hauts select{ width: 100%; }
+}
+
+/* ---------- Impression ---------- */
+@media print{
+  .rail, .barre, .entete-actions, .filtres-hauts, .carte-formulaire, .pied, .toast, .voile{ display: none !important; }
+  .zone{ margin: 0; }
+  .contenu{ padding: 0; }
+  .et-carte-grille{ box-shadow: none; border: 1px solid #999; }
+}

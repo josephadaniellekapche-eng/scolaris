@@ -1,0 +1,4 @@
+# Les sauvegardes contiennent des données sensibles (dont les mots de passe
+# hachés) : ce dossier ne doit jamais être accessible directement par URL,
+# seulement lu/écrit par api/sauvegardes.php côté serveur.
+Require all denied

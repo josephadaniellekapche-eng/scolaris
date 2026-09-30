@@ -1,0 +1,124 @@
+/* =========================================================
+   SCOLARIS — Module Administratif : Communication
+   Complément de tableau-de-bord.css / eleves.css / classes.css
+   ========================================================= */
+
+.panneau-communication{ display: none; }
+.panneau-communication.visible{ display: block; animation: apparait .25s ease both; }
+
+/* ---------- Champs de formulaire hors fenêtre modale ----------
+   classes.css ne stylise .champ/.grille-2 qu'à l'intérieur de .fenetre ;
+   le formulaire de composition vit directement dans une .carte, donc on
+   reprend ici le même langage visuel pour rester cohérent. */
+.grille-2{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 16px; }
+.champ.pleine{ grid-column: 1 / -1; }
+.champ label{ display: block; margin-bottom: 7px; font-size: 12.5px; font-weight: 600; color: var(--texte-doux); }
+.champ label i{ color: var(--rouge); font-style: normal; }
+.champ input, .champ select, .champ textarea{
+  width: 100%;
+  padding: 11px 13px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 8px;
+  background: var(--blanc);
+  font-size: 14.5px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.champ textarea{ resize: vertical; }
+.champ input:focus, .champ select:focus, .champ textarea:focus{
+  border-color: var(--ambre);
+  box-shadow: 0 0 0 3px rgba(240,169,59,.18);
+}
+.champ .aide{ display: block; margin-top: 6px; font-size: 12px; color: var(--texte-doux); }
+
+/* Historique et Modèles réutilisent .panneau (eleves.css) mais en une
+   seule colonne : leur contenu (filtres, tableau) n'est pas pensé pour
+   la grille à 2 colonnes par défaut de la fiche élève. */
+#panHistorique, #panModeles{ grid-template-columns: 1fr; }
+
+/* ---------- Choix du canal ---------- */
+.choix-canal{ display: flex; gap: 10px; flex-wrap: wrap; }
+.option-canal{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 600;
+  background: var(--blanc);
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+}
+.option-canal input{ width: 15px; height: 15px; accent-color: var(--nuit); }
+.option-canal.coche{ border-color: var(--nuit); background: var(--royal-pale); color: var(--nuit); }
+
+/* ---------- Aperçu des destinataires (formulaire) ---------- */
+.apercu-destinataires{
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--bordure);
+  font-size: 13.5px;
+}
+.apercu-destinataires .chargement{ color: var(--texte-doux); }
+.resume-destinataires{ display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: baseline; }
+.resume-destinataires b{ color: var(--nuit); font-size: 15px; }
+.avertissement-destinataires{ margin-top: 8px; color: var(--ocre); font-size: 12.5px; }
+.avertissement-destinataires.critique{ color: var(--rouge); }
+
+/* ---------- Bloc message (aperçu / détails) ---------- */
+.carte-message-apercu{
+  padding: 14px 16px;
+  border: 1px solid var(--bordure);
+  border-radius: 10px;
+  background: var(--champ);
+}
+.apercu-objet{ font-weight: 700; margin-bottom: 6px; color: var(--nuit); }
+.apercu-contenu{ white-space: pre-wrap; line-height: 1.5; font-size: 14px; }
+
+.liste-destinataires-apercu{
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 8px;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+}
+.liste-destinataires-apercu li{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px dashed var(--bordure);
+  font-size: 13px;
+}
+.liste-destinataires-apercu li:last-child{ border-bottom: none; }
+.liste-destinataires-apercu li small{ color: var(--texte-doux); white-space: nowrap; }
+.liste-destinataires-apercu li.manque small{ color: var(--rouge); }
+
+/* ---------- Badge canal (historique) ---------- */
+.badge-canal{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: #EEF1F7;
+  color: var(--texte);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---------- Aperçu tronqué du message dans l'historique ---------- */
+.apercu-message b{ display: block; font-size: 14px; font-weight: 600; }
+.apercu-message small{ display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; color: var(--texte-doux); font-size: 12.5px; max-width: 320px; }
+
+.tableau-details th, .tableau-details td{ font-size: 13px; }
+
+@media (max-width: 640px){
+  .choix-canal{ flex-direction: column; }
+  .option-canal{ justify-content: center; }
+}

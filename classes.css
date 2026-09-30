@@ -1,0 +1,346 @@
+/* =========================================================
+   SCOLARIS — Module Classes
+   Complément de tableau-de-bord.css et eleves.css
+   ========================================================= */
+
+.filtres-hauts{ margin-bottom: 16px; }
+.filtres-hauts input{ min-width: 220px; }
+
+/* ---------- Grille de cartes ---------- */
+.grille-classes{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+  gap: 14px;
+}
+
+.classe{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  background: var(--blanc);
+  box-shadow: 0 1px 2px rgba(30,43,126,.04);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color var(--transition), transform .14s ease, box-shadow var(--transition);
+}
+.classe:hover{
+  border-color: var(--nuit);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -14px rgba(30,43,126,.45);
+}
+
+.classe-tete{ display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+
+.pastille-classe{
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--blanc);
+  background: var(--nuit);
+}
+.pastille-classe.lycee{ background: var(--royal); }
+
+.classe-tete b{ display: block; font-size: 17px; font-weight: 800; color: var(--nuit); }
+.classe-tete small{ font-size: 12.5px; color: var(--texte-doux); }
+
+.classe-ligne{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 13.5px;
+  border-bottom: 1px dashed var(--bordure);
+}
+.classe-ligne:last-of-type{ border-bottom: none; }
+.classe-ligne span{ color: var(--texte-doux); }
+.classe-ligne b{ font-weight: 600; }
+
+.remplissage{ margin-top: 14px; }
+.remplissage-tete{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: var(--texte-doux);
+}
+.remplissage-tete b{ color: var(--nuit); font-weight: 700; }
+.rail-remplissage{
+  height: 6px;
+  border-radius: 4px;
+  background: var(--champ);
+  overflow: hidden;
+}
+.rail-remplissage i{
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: var(--vert);
+  transition: width .6s cubic-bezier(.2,.7,.3,1);
+}
+.rail-remplissage i.tendu{ background: var(--ambre); }
+.rail-remplissage i.complet{ background: var(--rouge); }
+
+.marqueur-complet{
+  position: absolute;
+  top: 14px; right: 14px;
+  padding: 3px 9px;
+  border-radius: 99px;
+  background: var(--rouge-pale);
+  color: var(--rouge);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ---------- Fiche : pastille d'en-tête ---------- */
+.portrait.classe-pastille{ font-size: 20px; border-radius: 18px; }
+
+/* ---------- Graphe des moyennes ---------- */
+#panStats .graphe{ height: 220px; }
+#panStats .colonne i{ width: 26px; }
+
+/* ---------- Assimilation des cours (évaluations) ---------- */
+.carte-pleine-largeur{ grid-column: 1 / -1; }
+.carte-pleine-largeur .carte-entete{ flex-wrap: wrap; }
+.sous-titre-stats{
+  margin: 4px 18px 0;
+  padding-top: 14px;
+  border-top: 1px dashed var(--bordure);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--texte-doux);
+}
+.graphe-matieres{
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding-bottom: 26px;
+}
+.graphe-matieres .colonne{ flex: 0 0 44px; }
+.graphe-matieres .colonne span{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  max-height: 96px;
+  font-size: 11px;
+}
+
+/* Répartition par appréciation : même code couleur que les puces
+   (.puce.ok/.ko dans eleves.css) pour repérer d'un coup d'œil les
+   matières/niveaux où les élèves sont en difficulté. */
+#grapheAppreciations .paire i.ok{ background: var(--vert); }
+#grapheAppreciations .paire i.ko{ background: var(--rouge); }
+
+/* ---------- Rangs ---------- */
+.rang{
+  display: inline-grid;
+  place-items: center;
+  min-width: 30px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  background: #EEF1F7;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--texte-doux);
+}
+.rang.or{ background: var(--ambre-clair); color: var(--nuit-fonce); }
+.rang.argent{ background: #E3E7EF; color: var(--nuit); }
+.rang.bronze{ background: #F3E3D3; color: #8A5A25; }
+
+.numero{ color: var(--texte-doux); font-variant-numeric: tabular-nums; }
+
+/* ---------- Colonne « Présence » (liste d'appel papier) ----------
+   À l'écran, la dernière colonne du tableau Effectif montre l'état de
+   scolarité (utile à l'administration) ; à l'impression (Liste d'appel),
+   elle montre à la place une case à cocher vierge pour que l'enseignant
+   pointe la présence à la main — deux usages différents d'un même
+   tableau, jamais les deux en même temps. */
+.colonne-impression{ display: none; }
+.case-presence{ display: inline-block; width: 16px; height: 16px; border: 1.5px solid #000; border-radius: 3px; }
+
+/* ---------- Impression de la liste d'appel ---------- */
+@media print{
+  .rail, .barre, .retour, .fiche-actions, .onglets, .pied, .toast, .voile,
+  #panMatieres, #panStats, #panInfos{ display: none !important; }
+  .application{ grid-template-columns: 1fr; }
+  .contenu{ padding: 0; max-width: none; }
+  #panEffectif{ display: grid !important; }
+  .fiche-tete{ background: none; color: #000; border-bottom: 2px solid #000; border-radius: 0; padding: 0 0 12px; }
+  .fiche-identite p{ color: #444; }
+  .etiquettes span{ background: none; border: 1px solid #999; color: #000; }
+  .portrait{ background: none; border: 2px solid #999; color: #000; }
+  .carte{ box-shadow: none; border: none; }
+  .tableau td{ padding: 9px 12px; }
+  .colonne-ecran{ display: none; }
+  .colonne-impression{ display: table-cell; }
+  @page{ margin: 15mm; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px){
+  .grille-classes{ grid-template-columns: 1fr; }
+  .filtres-hauts{ flex-direction: column; }
+  .filtres-hauts input, .filtres-hauts select{ width: 100%; }
+}
+
+/* =========================================================
+   FENÊTRE DE CRÉATION D'UNE CLASSE
+   ========================================================= */
+.fenetre{
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px 16px;
+  overflow-y: auto;
+  background: rgba(15,23,42,.62);
+}
+.fenetre.visible{ display: flex; }
+
+.fenetre-boite{
+  width: 100%;
+  max-width: 620px;
+  background: var(--blanc);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.55);
+  animation: monteFenetre .28s cubic-bezier(.2,.7,.3,1) both;
+}
+@keyframes monteFenetre{ from{ opacity:0; transform: translateY(16px);} to{ opacity:1; transform:none;} }
+
+.fenetre-barre{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--nuit);
+  color: var(--blanc);
+  font-size: 15px;
+}
+.fermer{ display: flex; color: rgba(255,255,255,.8); }
+.fermer:hover{ color: var(--blanc); }
+
+.fenetre-corps{ padding: 22px 24px; }
+
+.fenetre-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  border-top: 1px solid var(--bordure);
+  background: #FAFBFE;
+}
+
+/* Champs de la fenêtre */
+.fenetre .grille-2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px 16px;
+}
+.fenetre .champ.pleine{ grid-column: 1 / -1; }
+
+.fenetre .champ label{
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--texte-doux);
+}
+.fenetre .champ label i{ color: var(--rouge); font-style: normal; }
+
+.fenetre .champ input,
+.fenetre .champ select{
+  width: 100%;
+  padding: 11px 13px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 8px;
+  background: var(--blanc);
+  font-size: 14.5px;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.fenetre .champ input:focus,
+.fenetre .champ select:focus{
+  border-color: var(--ambre);
+  box-shadow: 0 0 0 3px rgba(240,169,59,.18);
+}
+.fenetre .champ input:disabled,
+.fenetre .champ select:disabled{ background: #F3F5F9; color: #9AA3B2; cursor: not-allowed; }
+.fenetre .champ input.invalide,
+.fenetre .champ select.invalide{ border-color: var(--rouge); background: var(--rouge-pale); }
+.fenetre .aide{ display: block; margin-top: 6px; font-size: 12px; color: var(--texte-doux); }
+
+/* Bouton destructif */
+.btn.danger{
+  border-color: var(--rouge-pale);
+  color: var(--rouge);
+}
+.btn.danger:hover{ background: var(--rouge-pale); border-color: var(--rouge); }
+
+/* Note d'information (fenêtre de création/modification) */
+.note{
+  margin-bottom: 16px;
+  padding: 12px 15px;
+  border-left: 3px solid var(--ambre);
+  border-radius: 0 8px 8px 0;
+  background: #FEF8EE;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6B5B3E;
+}
+
+/* Aperçu du programme rattaché */
+.apercu-programme{
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--ambre);
+  border-radius: 0 8px 8px 0;
+  background: #FEF8EE;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6B5B3E;
+}
+.apercu-programme b{ color: var(--nuit); }
+.apercu-programme .liste-matieres{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.apercu-programme .liste-matieres span{
+  padding: 3px 9px;
+  border-radius: 99px;
+  background: var(--blanc);
+  border: 1px solid #E8D9BE;
+  font-size: 12px;
+  color: var(--nuit);
+}
+.apercu-programme.alerte{
+  border-left-color: var(--rouge);
+  background: var(--rouge-pale);
+  color: #7A2E26;
+}
+
+.btn.ambre{
+  background: linear-gradient(180deg, var(--ambre-clair) 0%, var(--ambre) 100%);
+  border-color: var(--ambre);
+  color: var(--nuit-fonce);
+  font-weight: 700;
+}
+.btn.ambre:hover{ filter: brightness(1.04); transform: translateY(-1px); }
+
+@media (max-width: 640px){
+  .fenetre{ padding: 16px 10px; }
+  .fenetre .grille-2{ grid-template-columns: 1fr; }
+  .fenetre-actions .btn{ flex: 1; justify-content: center; }
+}

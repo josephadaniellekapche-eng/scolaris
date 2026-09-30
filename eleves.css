@@ -1,0 +1,317 @@
+/* =========================================================
+   SCOLARIS — Module Élèves
+   Complément de tableau-de-bord.css
+   ========================================================= */
+
+/* ---------- Liste ---------- */
+.compte-resultats{
+  padding: 12px 18px;
+  border-top: 1px solid var(--bordure);
+  font-size: 12.5px;
+  color: var(--texte-doux);
+}
+
+.tableau tbody tr.cliquable{ cursor: pointer; }
+
+.puce{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.puce::before{ content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.puce.ok{ background: var(--vert-pale); color: var(--vert); }
+.puce.att{ background: var(--ocre-pale); color: var(--ocre); }
+.puce.ko{ background: var(--rouge-pale); color: var(--rouge); }
+.puce.neutre{ background: #EEF1F7; color: var(--texte-doux); }
+
+/* ---------- Retour ---------- */
+.retour{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 8px 14px 8px 10px;
+  border-radius: 99px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--texte-doux);
+  transition: background var(--transition), color var(--transition);
+}
+.retour:hover{ background: #EEF1F7; color: var(--nuit); }
+.retour svg{ width: 17px; height: 17px; }
+
+/* ---------- En-tête de fiche ---------- */
+.fiche-tete{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  border-radius: var(--rayon);
+  background: linear-gradient(160deg, var(--nuit-clair) 0%, var(--nuit) 55%, var(--nuit-fonce) 100%);
+  color: var(--blanc);
+}
+
+.portrait{
+  width: 78px;
+  height: 78px;
+  flex: 0 0 78px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--nuit-fonce);
+  background: linear-gradient(180deg, var(--ambre-clair) 0%, var(--ambre) 100%);
+  box-shadow: 0 8px 22px -10px rgba(0,0,0,.7);
+}
+
+.fiche-identite{ flex: 1; min-width: 220px; }
+.fiche-identite h1{ font-size: 26px; font-weight: 800; letter-spacing: -.02em; }
+.fiche-identite p{ margin-top: 4px; font-size: 14px; color: rgba(255,255,255,.72); }
+
+.etiquettes{ display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.etiquettes span{
+  padding: 4px 11px;
+  border-radius: 99px;
+  background: rgba(255,255,255,.14);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.etiquettes span.ambre{ background: var(--ambre); color: var(--nuit-fonce); }
+.etiquettes span.rouge{ background: var(--rouge); }
+.etiquettes span.vert{ background: var(--vert); }
+
+.fiche-actions{ display: flex; gap: 9px; flex-wrap: wrap; }
+.fiche-actions .btn{ background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.24); color: var(--blanc); }
+.fiche-actions .btn:hover{ background: rgba(255,255,255,.2); border-color: var(--blanc); }
+.fiche-actions .btn.plein{ background: var(--blanc); border-color: var(--blanc); color: var(--nuit); }
+.fiche-actions .btn.plein:hover{ background: #EEF1F7; }
+
+/* ---------- Onglets ---------- */
+.onglets{
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--bordure);
+  overflow-x: auto;
+}
+.onglet{
+  position: relative;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--texte-doux);
+  transition: color var(--transition);
+}
+.onglet:hover{ color: var(--nuit); }
+.onglet.actif{ color: var(--nuit); }
+.onglet.actif::after{
+  content: "";
+  position: absolute;
+  left: 12px; right: 12px; bottom: -3px;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--ambre);
+}
+
+/* ---------- Panneaux ---------- */
+.panneau{ display: none; gap: 14px; grid-template-columns: 1fr 1fr; }
+.panneau.visible{ display: grid; animation: apparait .25s ease both; }
+@keyframes apparait{ from{ opacity: 0; transform: translateY(6px);} to{ opacity: 1; transform: none;} }
+
+#panNotes, #panAbsences, #panFinances{ grid-template-columns: 1fr; }
+#panScolarite{ grid-template-columns: 1fr 1fr; }
+#panScolarite .carte:first-child{ grid-row: span 2; }
+
+/* ---------- Listes de données ---------- */
+.donnees{ padding: 6px 18px 14px; }
+.donnees div{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--bordure);
+  font-size: 14px;
+}
+.donnees div:last-child{ border-bottom: none; }
+.donnees dt{ color: var(--texte-doux); }
+.donnees dd{ font-weight: 600; text-align: right; }
+
+/* ---------- Parcours ---------- */
+.parcours{ list-style: none; padding: 8px 18px 16px; }
+.parcours li{
+  position: relative;
+  padding: 11px 0 11px 24px;
+  font-size: 14px;
+  border-left: 2px solid var(--bordure);
+  margin-left: 5px;
+}
+.parcours li::before{
+  content: "";
+  position: absolute;
+  left: -6px; top: 17px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--blanc);
+  border: 2px solid var(--royal);
+}
+.parcours li:first-child::before{ background: var(--ambre); border-color: var(--ambre); }
+.parcours b{ display: block; font-weight: 600; }
+.parcours small{ color: var(--texte-doux); font-size: 12.5px; }
+
+/* ---------- Pièces ---------- */
+.pieces{ list-style: none; padding: 8px 18px 16px; }
+.pieces li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed var(--bordure);
+}
+.pieces li:last-child{ border-bottom: none; }
+.pieces li.manquante{ color: var(--rouge); }
+.pieces label{ display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.pieces input[type="checkbox"]{ width: 17px; height: 17px; accent-color: var(--vert); cursor: pointer; }
+.pieces small{ margin-left: auto; color: var(--texte-doux); font-size: 12px; }
+
+/* ---------- Notes ---------- */
+.barre-note{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+.barre-note .rail-note{
+  flex: 1;
+  height: 6px;
+  border-radius: 4px;
+  background: var(--champ);
+  overflow: hidden;
+}
+.barre-note .rail-note i{ display: block; height: 100%; border-radius: 4px; background: var(--royal); }
+.barre-note .rail-note i.faible{ background: var(--rouge); }
+.barre-note .rail-note i.bonne{ background: var(--vert); }
+.note-chiffre{ font-weight: 700; font-variant-numeric: tabular-nums; }
+.note-chiffre.faible{ color: var(--rouge); }
+.note-chiffre.bonne{ color: var(--vert); }
+
+.moyenne-generale{
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: var(--ambre-clair);
+  color: var(--nuit-fonce);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+/* ---------- Finances ---------- */
+.solde{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--bordure);
+  border-bottom: 1px solid var(--bordure);
+}
+.solde div{ background: var(--blanc); padding: 16px 18px; text-align: center; }
+.solde span{
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--texte-doux);
+}
+.solde b{
+  display: block;
+  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--nuit);
+}
+.solde b.du{ color: var(--rouge); }
+.solde b.regle{ color: var(--vert); }
+
+.form-finance{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--champ);
+  border-bottom: 1px solid var(--bordure);
+}
+.form-finance[hidden]{ display: none; }
+.form-finance .champ label{ display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; color: var(--texte-doux); }
+.form-finance .champ input, .form-finance .champ select{
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid var(--bordure);
+  border-radius: 8px;
+  background: var(--blanc);
+  font-size: 13.5px;
+  outline: none;
+}
+.form-finance .champ input:focus, .form-finance .champ select:focus{ border-color: var(--nuit); }
+.form-finance-actions{ grid-column: 1 / -1; display: flex; gap: 8px; }
+.form-finance-actions button:last-child{ color: var(--texte-doux); font-weight: 600; }
+
+.lien-recu{ font-size: 12.5px; font-weight: 600; color: var(--royal); text-decoration: none; }
+.lien-recu:hover{ text-decoration: underline; }
+
+/* Échéance modifiable directement dans le tableau des frais (module Finance). */
+.echeance-frais{
+  width: 132px;
+  padding: 6px 8px;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 13px;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+.echeance-frais:hover{ border-color: var(--bordure); background: var(--champ); }
+.echeance-frais:focus{ border-color: var(--nuit); background: var(--blanc); cursor: text; }
+.echeance-frais:disabled{ cursor: not-allowed; opacity: .6; }
+
+/* =========================================================
+   IMPRESSION DE LA FICHE
+   ========================================================= */
+@media print{
+  .rail, .barre, .retour, .fiche-actions, .onglets, .pied, .toast, .voile{ display: none !important; }
+  .application{ grid-template-columns: 1fr; }
+  .contenu{ padding: 0; max-width: none; }
+  .panneau{ display: grid !important; grid-template-columns: 1fr 1fr; page-break-inside: avoid; margin-bottom: 14px; }
+  .fiche-tete{ background: none; color: #000; border: 1px solid #999; padding: 16px; }
+  .fiche-identite p{ color: #444; }
+  .etiquettes span{ background: none; border: 1px solid #999; color: #000; }
+  .portrait{ background: none; border: 2px solid #999; color: #000; }
+  .carte{ box-shadow: none; }
+  @page{ margin: 15mm; }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px){
+  .panneau, .panneau.visible, #panScolarite{ grid-template-columns: 1fr; }
+  #panScolarite .carte:first-child{ grid-row: auto; }
+  .solde{ grid-template-columns: 1fr; }
+  .fiche-tete{ padding: 18px; }
+  .portrait{ width: 60px; height: 60px; flex: 0 0 60px; font-size: 20px; }
+  .fiche-identite h1{ font-size: 21px; }
+  .fiche-actions{ width: 100%; }
+  .fiche-actions .btn{ flex: 1; justify-content: center; }
+  .table-defile table{ min-width: 640px; }
+}

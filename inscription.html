@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCOLARIS — Inscription</title>
+  <link rel="stylesheet" href="tableau-de-bord.css">
+  <link rel="stylesheet" href="inscription.css">
+</head>
+<body>
+
+<div class="application">
+
+  <!-- ================= BARRE LATÉRALE ================= -->
+  <aside class="rail" id="rail">
+
+    <div class="rail-marque">
+      <img src="logo.png.jpeg" alt="Logo du SCOLARIS">
+      <div>
+        <b>SCOLARIS</b>
+        <span>Gestion scolaire</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+
+      <a class="menu-lien" href="tableau-de-bord.html">
+        <span class="ico" style="--c:#60A5FA;--bg:rgba(96,165,250,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-6h4v6h3a1 1 0 0 0 1-1v-9"/></svg></span>
+        <span class="texte">Tableau de bord</span>
+      </a>
+
+      <a class="menu-lien actif " href="inscription.html">
+        <span class="ico" style="--c:#22D3EE;--bg:rgba(34,211,238,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></span>
+        <span class="texte">Inscription</span>
+      </a>
+
+      <a class="menu-lien" href="eleves.html">
+        <span class="ico" style="--c:#A78BFA;--bg:rgba(167,139,250,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg></span>
+        <span class="texte">Élèves</span>
+      </a>
+
+      <a class="menu-lien" href="classes.html">
+        <span class="ico" style="--c:#38BDF8;--bg:rgba(56,189,248,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><path d="M3 21h18"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg></span>
+        <span class="texte">Classes</span>
+      </a>
+
+      <a class="menu-lien" href="matieres.html">
+        <span class="ico" style="--c:#F472B6;--bg:rgba(244,114,182,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5c-1.5-1-4-1.5-6-1.5-1 0-2 .1-3 .4v13c1-.3 2-.4 3-.4 2 0 4.5.5 6 1.5V6.5Z"/><path d="M12 6.5c1.5-1 4-1.5 6-1.5 1 0 2 .1 3 .4v13c-1-.3-2-.4-3-.4-2 0-4.5.5-6 1.5V6.5Z"/></svg></span>
+        <span class="texte">Matières</span>
+      </a>
+
+      <a class="menu-lien" href="enseignants.html">
+        <span class="ico" style="--c:#2DD4BF;--bg:rgba(45,212,191,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-1.5C5 16.5 8 15 12 15s7 1.5 7 4.5V21"/></svg></span>
+        <span class="texte">Enseignants</span>
+      </a>
+
+      <a class="menu-lien" href="emploi-du-temps.html">
+        <span class="ico" style="--c:#FBBF24;--bg:rgba(251,191,36,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18"/><path d="M8 3v3M16 3v3"/></svg></span>
+        <span class="texte">Emploi du temps</span>
+      </a>
+
+      <a class="menu-lien" href="Notes.html">
+        <span class="ico" style="--c:#FACC15;--bg:rgba(250,204,21,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+        <span class="texte">Notes</span>
+      </a>
+
+      <div class="groupe" id="groupeVie">
+        <button class="menu-lien deroulant" data-groupe="groupeVie">
+          <span class="ico" style="--c:#34D399;--bg:rgba(52,211,153,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="m7.5 12 3 3 6-6"/></svg></span>
+          <span class="texte">Vie scolaire</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="sous-menu">
+          <a class="sous-lien" href="absences.html">Absences &amp; Retards</a>
+        </div>
+      </div>
+
+      <div class="groupe" id="groupeFinances">
+        <button class="menu-lien deroulant" data-groupe="groupeFinances">
+          <span class="ico" style="--c:#4ADE80;--bg:rgba(74,222,128,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-3"/><path d="M16 12.5h.01"/><path d="M3 9V6a2 2 0 0 1 2-2h11"/></svg></span>
+          <span class="texte">Finances</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="sous-menu">
+          <a class="sous-lien" href="paiements.html">Paiements</a>
+          <a class="sous-lien" href="livret-caisse.html">Livret de caisse</a>
+          <a class="sous-lien" href="impayes.html">Impayés</a>
+          <a class="sous-lien" href="depenses.html">Dépenses</a>
+          <a class="sous-lien" href="rapports-financiers.html">Rapports financiers</a>
+        </div>
+      </div>
+
+      <div class="groupe" id="groupeResultats">
+        <button class="menu-lien deroulant" data-groupe="groupeResultats">
+          <span class="ico" style="--c:#FB7185;--bg:rgba(251,113,133,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="4" height="8"/><rect x="10" y="6" width="4" height="14"/><rect x="16" y="9" width="4" height="11"/></svg></span><span class="texte">Résultats &amp; Bulletins</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="sous-menu">
+          <a class="sous-lien" href="resultats.html">Résultats de classe</a>
+          <a class="sous-lien" href="bulletins.html">Bulletins</a>
+        </div>
+      </div>
+
+      <div class="groupe" id="groupeAdministratif">
+        <button class="menu-lien deroulant" data-groupe="groupeAdministratif">
+          <span class="ico" style="--c:#FB923C;--bg:rgba(251,146,60,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6Z"/></svg></span>
+          <span class="texte">Administratif</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="sous-menu">
+          <a class="sous-lien" href="administratif.html">Tableau de bord</a>
+          <a class="sous-lien" href="utilisateurs.html">Utilisateurs &amp; rôles</a>
+          <a class="sous-lien" href="personnel.html">Personnel administratif</a>
+          <a class="sous-lien" href="communication.html">Communication</a>
+        </div>
+      </div>
+
+      <a class="menu-lien" href="parametres.html">
+        <span class="ico" style="--c:#94A3B8;--bg:rgba(148,163,184,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V19a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 17.6a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 13a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 6.6a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 2.28V2a2 2 0 0 1 4 0v.09c0 .67.39 1.27 1 1.51.61.24 1.31.13 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06c-.46.51-.57 1.21-.33 1.82.24.61.84 1 1.51 1H21a2 2 0 0 1 0 4h-.09c-.67 0-1.27.39-1.51 1Z"/></svg></span>
+        <span class="texte">Paramètres</span>
+      </a>
+
+    </nav>
+
+    <div class="rail-pied">
+      <div class="compte">
+        <span class="avatar">AK</span>
+        <div>
+          <b>Aïcha Koné</b>
+        </div>
+      </div>
+      <a class="deconnexion" href="connexion.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+        </svg>
+        Se déconnecter
+      </a>
+    </div>
+
+  </aside>
+
+  <div class="voile" id="voile"></div>
+
+  <!-- ================= ZONE PRINCIPALE ================= -->
+  <div class="zone">
+
+    <header class="barre">
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div class="fil">
+        <span>Inscriptions</span>
+        <b>Année scolaire 2026 – 2027</b>
+      </div>
+      <div class="barre-actions" style="margin-left:auto">
+        <button class="cloche" id="cloche" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/>
+          </svg>
+          <span class="badge-cloche" id="badgeCloche">0</span>
+        </button>
+        <button class="avatar" id="boutonCompteBarre" type="button" aria-label="Menu du compte">jk</button>
+      </div>
+    </header>
+
+    <main class="contenu contenu-formulaire">
+
+      <div class="entete">
+        <div>
+          <h1>Inscriptions</h1>
+          <p class="explication">
+            Ce module est le point d'entrée pour toute nouvelle admission. Une fois l'élève inscrit,
+            sa gestion quotidienne se fait dans <b>Élèves</b> (dossier), <b>Finances</b> (paiements)
+            et <b>Résultats &amp; Bulletins</b> (suivi pédagogique).
+          </p>
+        </div>
+      </div>
+
+      <form class="feuille" id="formInscription" novalidate>
+
+        <!-- ---------- 1. ANNÉE SCOLAIRE ---------- -->
+        <section class="section">
+          <h2 class="section-titre">1. Année scolaire</h2>
+
+          <div class="grille-1">
+            <div class="champ">
+              <label for="annee">Année scolaire de l'inscription</label>
+              <select id="annee">
+                <option>2026-2027</option>
+                <option>2027-2028</option>
+                <option>2028-2029</option>
+
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------- 2. INFORMATIONS DE L'ÉLÈVE ---------- -->
+        <section class="section">
+          <h2 class="section-titre">2. Informations de l'élève</h2>
+
+          <div class="grille-2">
+            <div class="champ">
+              <label for="nom">Nom <i>*</i></label>
+              <input type="text" id="nom" placeholder="NDIAYE">
+            </div>
+            <div class="champ">
+              <label for="prenom">Prénom <i>*</i></label>
+              <input type="text" id="prenom" placeholder="Fatou">
+            </div>
+            <div class="champ">
+              <label for="naissance">Date de naissance <i>*</i></label>
+              <input type="date" id="naissance">
+            </div>
+            <div class="champ">
+              <label for="lieu">Lieu de naissance</label>
+              <input type="text" id="lieu" placeholder="Yaoundé">
+            </div>
+            <div class="champ">
+              <label for="sexe">Sexe</label>
+              <select id="sexe">
+                <option>Féminin</option>
+                <option>Masculin</option>
+              </select>
+            </div>
+            <div class="champ">
+              <label for="pere">Nom du père</label>
+              <input type="text" id="pere" placeholder="Moussa Ndiaye">
+            </div>
+            <div class="champ">
+              <label for="mere">Nom de la mère</label>
+              <input type="text" id="mere" placeholder="Awa Diop">
+            </div>
+            <div class="champ">
+              <label for="tuteur">Nom du parent / tuteur <i>*</i></label>
+              <input type="text" id="tuteur" placeholder="Moussa Ndiaye">
+            </div>
+            <div class="champ">
+              <label for="contact">Contact du parent <i>*</i></label>
+              <input type="tel" id="contact" placeholder="+237 677 00 00 00">
+            </div>
+            <div class="champ">
+              <label for="email">E-mail du parent</label>
+              <input type="email" id="email" placeholder="parent@exemple.com">
+            </div>
+            <div class="champ pleine">
+              <label for="adresse">Adresse</label>
+              <input type="text" id="adresse" placeholder="Quartier, rue, ville">
+            </div>
+            <div class="champ pleine">
+              <label for="origine">Établissement d'origine</label>
+              <input type="text" id="origine" placeholder="École ou collège précédent">
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------- 3. CLASSE ---------- -->
+        <section class="section">
+          <h2 class="section-titre">3. Classe</h2>
+
+          <div class="grille-2">
+            <div class="champ">
+              <label for="classe">Classe <i>*</i></label>
+              <select id="classe">
+                <option value=""> Choisir une classe </option>
+                <optgroup label="Collège (6ᵉ – 3ᵉ)">
+                  <option value="6A">6ᵉ A</option>
+                  <option value="6B">6ᵉ B</option>
+                  <option value="5A">5ᵉ A</option>
+                  <option value="5B">5ᵉ B</option>
+                  <option value="4ESP">4ᵉ Espagnol</option>
+                  <option value="4ALL">4ᵉ Allemand</option>
+                  <option value="3ESP">3ᵉ Espagnol</option>
+                  <option value="3ALL">3ᵉ Allemand</option>
+                </optgroup>
+                <optgroup label="Lycée (2nde – Terminale)">
+                  <option value="2C">2ⁿᵈᵉ C</option>
+                  <option value="2ESP">2ⁿᵈᵉ Espagnol</option>
+                  <option value="2ALL">2ⁿᵈᵉ Allemand</option>
+                  <option value="1C">1ʳᵉ C</option>
+                  <option value="1D">1ʳᵉ D</option>
+                  <option value="1ESP">1ʳᵉ Espagnol</option>
+                  <option value="1ALL">1ʳᵉ Allemand</option>
+                  <option value="TC2">Terminale C</option>
+                  <option value="TD">Terminale D</option>
+                  <option value="TESP">Terminale Espagnol</option>
+                  <option value="TALL">Terminale Allemand</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="champ">
+              <label for="statut">Type d'inscription</label>
+              <select id="statut">
+                <option>Nouvel élève</option>
+                <option>Réinscription</option>
+                <option>Transfert</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="places" id="places"></p>
+        </section>
+
+        <!-- ---------- 4. FRAIS ---------- -->
+        <section class="section">
+          <h2 class="section-titre">4. Frais</h2>
+
+          <p class="note">
+            Les frais obligatoires de la classe (scolarité, inscription) sont appliqués automatiquement,
+            inutile de les sélectionner. Les frais optionnels (cantine, transport…) pourront être ajoutés
+            plus tard depuis le dossier financier de l'élève, si la famille en fait la demande.
+          </p>
+
+          <ul class="frais" id="fraisObligatoires">
+            <li class="attente">Choisissez d'abord une classe pour afficher les frais.</li>
+          </ul>
+
+          <div class="options-frais" id="optionsFrais">
+            <label class="option">
+              <input type="checkbox" data-code="cantine" data-montant="60000" data-libelle="Cantine">
+              <span class="coche"></span>
+              Cantine : <b>60 000 FCFA</b>
+            </label>
+            <label class="option">
+              <input type="checkbox" data-code="transport" data-montant="75000" data-libelle="Transport">
+              <span class="coche"></span>
+              Transport : <b>75 000 FCFA</b>
+            </label>
+            <label class="option">
+              <input type="checkbox" data-code="tenue" data-montant="15000" data-libelle="Tenue scolaire">
+              <span class="coche"></span>
+              Tenue scolaire : <b>15 000 FCFA</b>
+            </label>
+          </div>
+        </section>
+
+        <!-- ---------- 5. RÉDUCTION ---------- -->
+        <section class="section">
+          <h2 class="section-titre">5. Réduction éventuelle</h2>
+
+          <div class="grille-2">
+            <div class="champ">
+              <label for="reduction">Réduction</label>
+              <select id="reduction">
+                <option value="0">Aucune</option>
+                <option value="10">Fratrie : 10 %</option>
+                <option value="25">Enfant du personnel : 25 %</option>
+                <option value="50">Bourse partielle : 50 %</option>
+                <option value="100">Bourse totale : 100 %</option>
+              </select>
+            </div>
+            <div class="champ">
+              <label for="motifReduction">Motif (optionnel)</label>
+              <input type="text" id="motifReduction" placeholder="Décision du conseil du 12 juillet">
+            </div>
+          </div>
+
+          <div class="total">
+            <strong id="montantTotal">0 FCFA</strong>
+            <span>Montant total</span>
+            <p class="detail" id="detailTotal"></p>
+          </div>
+        </section>
+
+        <!-- ---------- 6. PAIEMENT ---------- -->
+        <section class="section">
+          <h2 class="section-titre">6. Paiement des frais d'inscription</h2>
+
+          <p class="rappel-frais">Frais d'inscription : <!--<b id="rappelInscription"></b> --></p>
+
+          <div class="grille-2">
+            <div class="champ">
+              <label for="verse">Montant versé (FCFA)</label>
+              <input type="number" id="verse" min="0" step="500" placeholder="0">
+              <small class="aide">0 = aucun paiement aujourd'hui</small>
+            </div>
+            <div class="champ">
+              <label for="mode">Mode de paiement</label>
+              <select id="mode">
+                <option>Espèces</option>
+                <option>MTN Mobile Money</option>
+                <option>Orange Money</option>
+                <option>Virement bancaire</option>
+                <option>Chèque</option>
+              </select>
+            </div>
+            <div class="champ">
+              <label for="reference">Référence (optionnel)</label>
+              <input type="text" id="reference" placeholder="N° de reçu ou de transaction">
+            </div>
+            <div class="champ">
+              <label for="observation">Observation (optionnel)</label>
+              <input type="text" id="observation" placeholder="Remarque interne">
+            </div>
+          </div>
+
+          <p class="note">
+            Laissez à 0 si la famille ne paie rien aujourd'hui ,le solde restera dû et pourra être réglé
+            plus tard, comme pour tout autre frais.
+          </p>
+
+          <div class="barre-envoi">
+            <button type="button" class="btn" id="btnVider">Vider le formulaire</button>
+            <button type="submit" class="btn ambre" id="btnEnregistrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+              Enregistrer l'inscription
+            </button>
+          </div>
+
+        </section>
+
+      </form>
+
+      <p class="pied">© 2026 SCOLARIS – Gestion Scolaire</p>
+
+    </main>
+  </div>
+</div>
+
+<!-- ================= CERTIFICAT ================= -->
+<div class="fenetre" id="fenetreCertificat">
+  <div class="fenetre-boite">
+
+    <div class="fenetre-barre">
+      <b>Certificat d'inscription</b>
+      <button type="button" class="fermer" id="fermerCertificat" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="certificat" id="certificat">
+
+      <div class="cert-entete">
+        <div class="cert-etab">
+          <img src="logo.png.jpeg" alt="">
+          <div>
+            <b>SCOLARIS</b>
+            <i>Établissement d'enseignement secondaire</i>
+            <span>BP 1204 — YAOUNDE</span>
+            <span>Tél. : +237 60 000 00 00</span>
+            <span>contact@lyceeclassic.edu</span>
+          </div>
+        </div>
+        <div class="cert-annee">
+          ANNÉE ACADÉMIQUE <b id="certAnnee">2026 / 2027</b>
+        </div>
+      </div>
+
+      <h2 class="cert-titre">Certificat d'inscription scolaire</h2>
+
+      <div class="cert-corps">
+        <p>Je soussignée <b>Madame josepha kapche</b>, Directrice du <b>SCOLARIS</b>,</p>
+        <p>certifie que l'élève <b id="certEleve">:</b></p>
+        <p>né(e) le <b id="certNaissance">:</b> à <b id="certLieu">:</b>,</p>
+        <p id="certFiliation">fils/fille de <b>:</b> et de <b>:</b>,</p>
+        <p>s'est inscrit(e) dans le registre de mon établissement en classe de
+           <b id="certClasse">—</b> le <b id="certDate">—</b>
+           pour l'année académique <b id="certAnnee2">2026 / 2027</b>.</p>
+        <p>En foi de quoi, le présent certificat lui est délivré pour servir et valoir ce que de droit.</p>
+      </div>
+
+      <div class="cert-pied">
+        <div class="cert-ref">
+          <span>N° <b id="certNumero">:</b></span>
+          <span id="certPaiement"></span>
+        </div>
+        <div class="cert-signature">
+          <span id="certFait">Fait à Yaoundé, le :</span>
+          <b>La Directrice</b>
+          <div class="cachet">Lycée<br>Classic<br>· Direction ·</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="fenetre-actions">
+      <a class="btn" id="lienRecu" href="#" hidden>Voir le reçu du versement</a>
+      <button type="button" class="btn" id="btnNouveau">Nouvelle inscription</button>
+      <button type="button" class="btn ambre" id="btnImprimer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/>
+        </svg>
+        Imprimer
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  <span id="toastTexte"></span>
+</div>
+
+<script src="compte.js"></script>
+<script src="inscription.js"></script>
+</body>
+</html>
